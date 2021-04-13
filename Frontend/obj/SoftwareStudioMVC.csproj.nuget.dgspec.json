@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\SoftwareStudioMVC\\SoftwareStudioMVC.csproj": {}
+    "E:\\SoftwareStudioMVC\\Frontend\\SoftwareStudioMVC.csproj": {}
   },
   "projects": {
-    "E:\\SoftwareStudioMVC\\SoftwareStudioMVC.csproj": {
+    "E:\\SoftwareStudioMVC\\Frontend\\SoftwareStudioMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\SoftwareStudioMVC\\SoftwareStudioMVC.csproj",
+        "projectUniqueName": "E:\\SoftwareStudioMVC\\Frontend\\SoftwareStudioMVC.csproj",
         "projectName": "SoftwareStudioMVC",
-        "projectPath": "E:\\SoftwareStudioMVC\\SoftwareStudioMVC.csproj",
+        "projectPath": "E:\\SoftwareStudioMVC\\Frontend\\SoftwareStudioMVC.csproj",
         "packagesPath": "C:\\Users\\Power1stZ\\.nuget\\packages\\",
-        "outputPath": "E:\\SoftwareStudioMVC\\obj\\",
+        "outputPath": "E:\\SoftwareStudioMVC\\Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Power1stZ\\AppData\\Roaming\\NuGet\\NuGet.Config"
