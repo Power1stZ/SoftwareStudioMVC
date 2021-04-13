@@ -50,7 +50,11 @@ namespace SoftwareStudioMVC
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=HomeAdmin}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                    name: "history",
+                    pattern: "{controller=Booking}/{action=Index}/{id?}");
             });
         }
     }
