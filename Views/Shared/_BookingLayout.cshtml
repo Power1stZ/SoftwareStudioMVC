@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Software Studio</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/booking.css" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <ul class="navbar">
+        <li class="navbarlist"><a class="active" href="#home">Home</a></li>
+        <li class="navbarlist"><a href="#news">News</a></li>
+        <li class="navbarlist"><a href="#contact">Contact</a></li>
+        <li class="navbarlist"><a href="#about">About</a></li>
+    </ul>
+    <div class="column side">
+        <h2 class="username">GGWP_first</h2>
+        <ul class="sidebar">
+            <li class="sidebarlist" id=@ViewData["Page1"]><a asp-controller="Booking"
+                    asp-action="Index">การจองของฉัน</a>
+            </li>
+            <li class="sidebarlist" id=@ViewData["Page2"]><a asp-controller="Booking"
+                    asp-action="Overdue">จองเกินเวลา</a></li>
+            <li class="sidebarlist" id=@ViewData["Page3"]><a asp-controller="Booking"
+                    asp-action="History">ประวัติการจอง</a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>

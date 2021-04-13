@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #c5dedd;
+}
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #001d3d;
+}
+
+.navbarlist {
+  float: left;
+}
+
+.navbarlist a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbarlist a:hover {
+  background-color: #111;
+}
+.username {
+  padding: 14px 16px;
+  background-color: #fff1e6;
+  text-align: center;
+  border-radius: 15px;
+}
+.roomno {
+  background-color: #fff1e6;
+  text-align: center;
+  border-radius: 15px;
+}
+.sidebar {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  overflow: hidden;
+  height: 100%;
+  /* background-color: #ffffff; */
+  width: 100%;
+}
+
+.sidebarlist {
+  float: top;
+}
+
+.sidebarlist a {
+  display: block;
+  padding: 14px 16px;
+  margin: 0;
+  text-decoration: bold;
+  text-decoration: none;
+  color: #111;
+}
+#unselect a:hover {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+#select a {
+  color: #008857;
+  font-size: large;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+hr {
+  height: 4px;
+  border: none;
+  border-radius: 10px;
+  background-color: #008857;
+}
+
+.column {
+  float: left;
+  padding: 15px;
+}
+.column.even {
+  width: 50%;
+}
+
+.column.side {
+  width: 30%;
+}
+
+.column.mid {
+  margin-top: 100px;
+  width: 70%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.panel {
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 20px 0px;
+}
+
+.content-row {
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.equipment {
+  padding: 10px 0px;
+  width: 120px;
+}
+
+.time {
+  padding: 10px 0px;
+}
+
+.button1 {
+  width: 120px;
+}
+.button2 {
+  width: 150px;
+}
+
+.restore {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+}
+.restorebtn {
+  background-color: #00cd83;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.restore:hover .restorebtn {
+  color: #ffffff;
+}
+
+.cancel {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+}
+.cancelbtn {
+  background-color: #ff9999;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.cancel:hover .cancelbtn {
+  color: #ffffff;
+}
+
+.overdue {
+  padding: 10px 0px;
+  color: #ff9999;
+  font-weight: 700;
+  text-align: center;
+}
+
+.restored {
+  padding: 10px 0px;
+  color: #00cd83;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .column.side,
+  .column.mid {
+    width: 100%;
+  }
+}

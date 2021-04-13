@@ -9,11 +9,11 @@ using SoftwareStudioMVC.Models;
 
 namespace SoftwareStudioMVC.Controllers
 {
-    public class HomeController : Controller
+    public class HomeAdminController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<HomeAdminController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeAdminController(ILogger<HomeAdminController> logger)
         {
             _logger = logger;
         }
