@@ -1,5 +1,5 @@
 {
-  "FilePath": "e:\\SoftwareStudioMVC\\SoftwareStudioMVC.csproj",
+  "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\SoftwareStudioMVC.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15619,48 +15619,48 @@
   "RootNamespace": "SoftwareStudioMVC",
   "Documents": [
     {
-      "FilePath": "e:\\SoftwareStudioMVC\\Views\\HomeAdmin\\Privacy.cshtml",
-      "TargetPath": "Views\\HomeAdmin\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\SoftwareStudioMVC\\Views\\_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\SoftwareStudioMVC\\Views\\HomeAdmin\\Index.cshtml",
-      "TargetPath": "Views\\HomeAdmin\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\SoftwareStudioMVC\\Views\\_ViewStart.cshtml",
-      "TargetPath": "Views\\_ViewStart.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\SoftwareStudioMVC\\Views\\Shared\\_BookingLayout.cshtml",
-      "TargetPath": "Views\\Shared\\_BookingLayout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\SoftwareStudioMVC\\Views\\Shared\\_AdminSidebarLayout.cshtml",
-      "TargetPath": "Views\\Shared\\_AdminSidebarLayout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "e:\\SoftwareStudioMVC\\Views\\Booking\\History.cshtml",
+      "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\Views\\Booking\\History.cshtml",
       "TargetPath": "Views\\Booking\\History.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "e:\\SoftwareStudioMVC\\Views\\Booking\\Overdue.cshtml",
+      "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\Views\\Shared\\_AdminSidebarLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_AdminSidebarLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\Views\\HomeAdmin\\Index.cshtml",
+      "TargetPath": "Views\\HomeAdmin\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\Views\\Booking\\Index.cshtml",
+      "TargetPath": "Views\\Booking\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\Views\\Shared\\_BookingLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_BookingLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\Views\\Booking\\Overdue.cshtml",
       "TargetPath": "Views\\Booking\\Overdue.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "e:\\SoftwareStudioMVC\\Views\\Booking\\Index.cshtml",
-      "TargetPath": "Views\\Booking\\Index.cshtml",
+      "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\Views\\HomeAdmin\\Privacy.cshtml",
+      "TargetPath": "Views\\HomeAdmin\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     }
   ],
