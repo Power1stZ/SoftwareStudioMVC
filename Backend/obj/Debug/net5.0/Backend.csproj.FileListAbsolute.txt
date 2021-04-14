@@ -27,3 +27,15 @@ E:\SoftwareStudioMVC\Backend\obj\Debug\net5.0\Backend.dll
 E:\SoftwareStudioMVC\Backend\obj\Debug\net5.0\ref\Backend.dll
 E:\SoftwareStudioMVC\Backend\obj\Debug\net5.0\Backend.pdb
 E:\SoftwareStudioMVC\Backend\obj\Debug\net5.0\Backend.genruntimeconfig.cache
+E:\SoftwareStudioMVC\Backend\bin\Debug\net5.0\DnsClient.dll
+E:\SoftwareStudioMVC\Backend\bin\Debug\net5.0\MongoDB.Bson.dll
+E:\SoftwareStudioMVC\Backend\bin\Debug\net5.0\MongoDB.Driver.dll
+E:\SoftwareStudioMVC\Backend\bin\Debug\net5.0\MongoDB.Driver.Core.dll
+E:\SoftwareStudioMVC\Backend\bin\Debug\net5.0\MongoDB.Libmongocrypt.dll
+E:\SoftwareStudioMVC\Backend\bin\Debug\net5.0\SharpCompress.dll
+E:\SoftwareStudioMVC\Backend\bin\Debug\net5.0\runtimes\win\native\libzstd.dll
+E:\SoftwareStudioMVC\Backend\bin\Debug\net5.0\runtimes\win\native\snappy32.dll
+E:\SoftwareStudioMVC\Backend\bin\Debug\net5.0\runtimes\win\native\snappy64.dll
+E:\SoftwareStudioMVC\Backend\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
+E:\SoftwareStudioMVC\Backend\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
+E:\SoftwareStudioMVC\Backend\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
