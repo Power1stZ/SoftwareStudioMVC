@@ -16,6 +16,7 @@ namespace Frontend.Controllers
         public BookingController(ILogger<BookingController> logger)
         {
             _logger = logger;
+
         }
 
         public IActionResult Index()

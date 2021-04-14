@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Frontend.Services;
 
 namespace Frontend
 {
@@ -23,6 +24,10 @@ namespace Frontend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<UserService>();
+            services.AddSingleton<HistoryService>();
+            services.AddSingleton<ToolService>();
+            services.AddSingleton<RoomService>();
             services.AddControllersWithViews();
         }
 
