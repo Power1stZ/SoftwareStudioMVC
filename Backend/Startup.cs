@@ -37,6 +37,7 @@ namespace Backend
             services.AddSingleton<UserService>();
             services.AddSingleton<HistoryService>();
             services.AddSingleton<ToolService>();
+            services.AddSingleton<RoomService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

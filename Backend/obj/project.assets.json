@@ -631,19 +631,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Power1stZ\\.nuget\\packages\\": {}
+    "C:\\Users\\Alps\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\SoftwareStudioMVC\\Backend\\Backend.csproj",
+      "projectUniqueName": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Backend\\Backend.csproj",
       "projectName": "Backend",
-      "projectPath": "E:\\SoftwareStudioMVC\\Backend\\Backend.csproj",
-      "packagesPath": "C:\\Users\\Power1stZ\\.nuget\\packages\\",
-      "outputPath": "E:\\SoftwareStudioMVC\\Backend\\obj\\",
+      "projectPath": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Backend\\Backend.csproj",
+      "packagesPath": "C:\\Users\\Alps\\.nuget\\packages\\",
+      "outputPath": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Power1stZ\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alps\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -694,7 +694,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

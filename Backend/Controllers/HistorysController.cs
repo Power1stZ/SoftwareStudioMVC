@@ -38,7 +38,37 @@ namespace Backend.Controllers
         {
             _historyService.Create(history);
 
-            return CreatedAtRoute("Gethistory", new { id = history.Id.ToString() }, history);
+            return CreatedAtRoute("GetHistory", new { id = history.Id.ToString() }, history);
+        }
+
+        [HttpPut("{id:length(24)}")]
+        public IActionResult Update(string id, History historyIn)
+        {
+            var history = _historyService.Get(id);
+
+            if (history == null)
+            {
+                return NotFound();
+            }
+
+            _historyService.Update(id, historyIn);
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id:length(24)}")]
+        public IActionResult Delete(string id)
+        {
+            var history = _historyService.Get(id);
+
+            if (history == null)
+            {
+                return NotFound();
+            }
+
+            _historyService.Remove(history.Id);
+
+            return NoContent();
         }
     }
 
