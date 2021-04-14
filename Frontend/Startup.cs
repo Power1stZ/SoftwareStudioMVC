@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace SoftwareStudioMVC
+namespace Frontend
 {
     public class Startup
     {
@@ -50,10 +50,6 @@ namespace SoftwareStudioMVC
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=HomeAdmin}/{action=Index}/{id?}");
-
-                endpoints.MapControllerRoute(
-                    name: "history",
                     pattern: "{controller=Booking}/{action=Index}/{id?}");
             });
         }

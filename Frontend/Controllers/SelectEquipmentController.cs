@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -9,23 +9,21 @@ using Frontend.Models;
 
 namespace Frontend.Controllers
 {
-    public class HomeAdminController : Controller
+    public class SelectEquipmentController : Controller
     {
-        private readonly ILogger<HomeAdminController> _logger;
+        private readonly ILogger<SelectEquipmentController> _logger;
 
-        public HomeAdminController(ILogger<HomeAdminController> logger)
+        public SelectEquipmentController(ILogger<SelectEquipmentController> logger)
         {
             _logger = logger;
         }
 
         public IActionResult Index()
         {
+            
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+
     }
 }

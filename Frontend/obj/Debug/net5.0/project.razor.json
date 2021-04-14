@@ -1,5 +1,5 @@
 {
-  "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\SoftwareStudioMVC.csproj",
+  "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\Frontend.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "5.0",
@@ -15616,11 +15616,16 @@
     ],
     "CSharpLanguageVersion": 900
   },
-  "RootNamespace": "SoftwareStudioMVC",
+  "RootNamespace": "Frontend",
   "Documents": [
     {
       "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\Views\\Booking\\History.cshtml",
       "TargetPath": "Views\\Booking\\History.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\Views\\SelectEquipment\\Index.cshtml",
+      "TargetPath": "Views\\SelectEquipment\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15661,6 +15666,11 @@
     {
       "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\SoftwareStudioMVC\\Frontend\\Views\\Shared\\_TopNavBarLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_TopNavBarLayout.cshtml",
       "FileKind": "mvc"
     }
   ],

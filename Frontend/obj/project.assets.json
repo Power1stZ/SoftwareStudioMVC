@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\SoftwareStudioMVC\\Frontend\\SoftwareStudioMVC.csproj",
-      "projectName": "SoftwareStudioMVC",
-      "projectPath": "E:\\SoftwareStudioMVC\\Frontend\\SoftwareStudioMVC.csproj",
+      "projectUniqueName": "E:\\SoftwareStudioMVC\\Frontend\\Frontend.csproj",
+      "projectName": "Frontend",
+      "projectPath": "E:\\SoftwareStudioMVC\\Frontend\\Frontend.csproj",
       "packagesPath": "C:\\Users\\Power1stZ\\.nuget\\packages\\",
       "outputPath": "E:\\SoftwareStudioMVC\\Frontend\\obj\\",
       "projectStyle": "PackageReference",

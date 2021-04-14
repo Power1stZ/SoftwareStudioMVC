@@ -5,9 +5,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using SoftwareStudioMVC.Models;
+using Frontend.Models;
 
-namespace SoftwareStudioMVC.Controllers
+namespace Frontend.Controllers
 {
     public class BookingController : Controller
     {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E6cvmfR7AmKuYyXEMZcLpAqVE0Z/zdAn/HZhD9YgiDm6w0HWLCKuoFNpy7XtBA7vhFqmDnDMPZ3EAxZyIOXDfg==",
+  "dgSpecHash": "DPVqZpYq70jM4IhBZWRo867w5NFA0Jl9kd3pMJRJBUdm6PQMpA+wYoxiExvcIzfudIYdgzXyzpLgc/XKCf4rgA==",
   "success": true,
-  "projectFilePath": "E:\\SoftwareStudioMVC\\Frontend\\SoftwareStudioMVC.csproj",
+  "projectFilePath": "E:\\SoftwareStudioMVC\\Frontend\\Frontend.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
