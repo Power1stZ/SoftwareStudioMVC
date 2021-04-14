@@ -38,7 +38,37 @@ namespace Backend.Controllers
         {
             _toolService.Create(tool);
 
-            return CreatedAtRoute("Gettool", new { id = tool.Id.ToString() }, tool);
+            return CreatedAtRoute("GetTool", new { id = tool.Id.ToString() }, tool);
+        }
+
+        [HttpPut("{id:length(24)}")]
+        public IActionResult Update(string id, Tool toolIn)
+        {
+            var tool = _toolService.Get(id);
+
+            if (tool == null)
+            {
+                return NotFound();
+            }
+
+            _toolService.Update(id, toolIn);
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id:length(24)}")]
+        public IActionResult Delete(string id)
+        {
+            var tool = _toolService.Get(id);
+
+            if (tool == null)
+            {
+                return NotFound();
+            }
+
+            _toolService.Remove(tool.Id);
+
+            return NoContent();
         }
     }
 

@@ -21,7 +21,7 @@ namespace Backend.Models
         public DateTime rentTime { get; set; }
 
         [BsonElement("room")]
-        public int room { get; set; }
+        public string room { get; set; }
 
         [BsonElement("description")]
         public string description { get; set; }

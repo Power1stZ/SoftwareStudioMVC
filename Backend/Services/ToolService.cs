@@ -28,5 +28,13 @@ namespace Backend.Services
             _tools.InsertOne(tool);
             return tool;
         }
+        public void Update(string id, Tool toolIn) =>
+            _tools.ReplaceOne(tool => tool.Id == id, toolIn);
+
+        public void Remove(Tool toolIn) =>
+            _tools.DeleteOne(tool => tool.Id == toolIn.Id);
+
+        public void Remove(string id) => 
+            _tools.DeleteOne(tool => tool.Id == id);
     }
 }

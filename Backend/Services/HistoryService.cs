@@ -28,5 +28,14 @@ namespace Backend.Services
             _historys.InsertOne(history);
             return history;
         }
+
+        public void Update(string id, History historyIn) =>
+            _historys.ReplaceOne(history => history.Id == id, historyIn);
+
+        public void Remove(History historyIn) =>
+            _historys.DeleteOne(history => history.Id == historyIn.Id);
+
+        public void Remove(string id) => 
+            _historys.DeleteOne(history => history.Id == id);
     }
 }
