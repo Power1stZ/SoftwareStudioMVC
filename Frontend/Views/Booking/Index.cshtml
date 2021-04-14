@@ -1,6 +1,14 @@
+@model IEnumerable<Frontend.Models.History>
+
 @{
+
     Layout = "_BookingLayout";
 }
+@* @foreach (var item in Model)
+{
+    <div>@Html.DisplayFor(modelItem => item.time)</div>
+
+} *@
 <div class="column mid">
     <h3 class="date">วันที่จอง : 4/4/2021</h3>
     <div class="panel">

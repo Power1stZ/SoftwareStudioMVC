@@ -14,7 +14,7 @@ namespace Frontend.Services
             var client = new MongoClient("mongodb+srv://nattapong:Power1stun@cluster0.ephtu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
             var database = client.GetDatabase("SoftwareStudio");
 
-            _tools = database.GetCollection<Tool>("Tool");
+            _tools = database.GetCollection<Tool>("Tools");
         }
 
         public List<Tool> Get() =>
