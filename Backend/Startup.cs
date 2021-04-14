@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.Options;
+using Backend.Models;
+using Backend.Services;
 
 namespace Backend
 {
@@ -26,7 +29,14 @@ namespace Backend
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<UserDatabaseSettings>(
+    Configuration.GetSection(nameof(UserDatabaseSettings)));
 
+            services.AddSingleton<IUserDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<UserDatabaseSettings>>().Value);
+            services.AddSingleton<UserService>();
+            services.AddSingleton<HistoryService>();
+            services.AddSingleton<ToolService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
