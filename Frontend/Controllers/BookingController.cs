@@ -32,9 +32,9 @@ namespace Frontend.Controllers
             {
                 using (var client = new HttpClient())
                 {
-                    client.BaseAddress = new Uri("http://localhost:5001/api/");
+                    client.BaseAddress = new Uri("https://localhost:5001/api/");
                     //HTTP GET
-                    var responseTask = client.GetAsync("Historys");
+                    var responseTask = client.GetAsync("Historys/61010844");
                     responseTask.Wait();
 
                     var result = responseTask.Result;
@@ -75,7 +75,50 @@ namespace Frontend.Controllers
             ViewData["Page1"] = "unselect";
             ViewData["Page2"] = "unselect";
             ViewData["Page3"] = "select";
-            return View();
+            
+            
+            IEnumerable<History> Historys = null;            
+            
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri("https://localhost:5001/api/");
+                    //HTTP GET
+                    var responseTask = client.GetAsync("Historys/61010844");
+                    responseTask.Wait();
+
+                    var result = responseTask.Result;
+                    if (result.IsSuccessStatusCode)
+                    {
+                        var readTask = result.Content.ReadAsAsync<IList<History>>();
+                        readTask.Wait();
+
+                        Historys = readTask.Result;
+                    }
+                    else //web api sent error response 
+                    {
+                        //log response status here..
+
+                        Historys = Enumerable.Empty<History>();
+
+                        ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
+                    }
+                }
+
+                //Some risky client call that will call parallell code / async /TPL or in some way cause an AggregateException 
+
+            }
+            catch (AggregateException err)
+            {
+                foreach (var errInner in err.InnerExceptions)
+                {
+                    Debug.WriteLine(errInner); //this will call ToString() on the inner execption and get you message, stacktrace and you could perhaps drill down further into the inner exception of it if necessary 
+                }
+            }
+            Console.WriteLine("pass");
+            Console.WriteLine(Historys);
+            return View(Historys);
         }
 
         public IActionResult Overdue()
@@ -83,7 +126,49 @@ namespace Frontend.Controllers
             ViewData["Page1"] = "unselect";
             ViewData["Page2"] = "select";
             ViewData["Page3"] = "unselect";
-            return View();
+
+            IEnumerable<History> Historys = null;            
+            
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri("https://localhost:5001/api/");
+                    //HTTP GET
+                    var responseTask = client.GetAsync("Historys/61010844");
+                    responseTask.Wait();
+
+                    var result = responseTask.Result;
+                    if (result.IsSuccessStatusCode)
+                    {
+                        var readTask = result.Content.ReadAsAsync<IList<History>>();
+                        readTask.Wait();
+
+                        Historys = readTask.Result;
+                    }
+                    else //web api sent error response 
+                    {
+                        //log response status here..
+
+                        Historys = Enumerable.Empty<History>();
+
+                        ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
+                    }
+                }
+
+                //Some risky client call that will call parallell code / async /TPL or in some way cause an AggregateException 
+
+            }
+            catch (AggregateException err)
+            {
+                foreach (var errInner in err.InnerExceptions)
+                {
+                    Debug.WriteLine(errInner); //this will call ToString() on the inner execption and get you message, stacktrace and you could perhaps drill down further into the inner exception of it if necessary 
+                }
+            }
+            Console.WriteLine("pass");
+            Console.WriteLine(Historys);
+            return View(Historys);
         }
     }
 }

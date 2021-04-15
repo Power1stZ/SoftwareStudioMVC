@@ -33,6 +33,10 @@ namespace Frontend.Controllers.api
             return history;
         }
 
+        [HttpGet("{id:length(8)}", Name = "GetByid")]
+        public List<History> GetById(string id) =>
+            _historyService.GetById(id);
+
         [HttpPost]
         public ActionResult<History> Create(History history)
         {

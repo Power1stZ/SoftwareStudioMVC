@@ -1,43 +1,49 @@
+@model IEnumerable<Frontend.Models.History>
+
 @{
+
     Layout = "_BookingLayout";
+    var tempDay = "";
 }
 <div class="column mid">
-    <h3 class="date">วันที่จอง : 2/4/2021</h3>
-    <div class="panel">
-        <div class="content-row">
-            <div class="equipment">เชิงเทียน 5</div>
-            <div class="time">9.30-10.30 น.</div>
-            <div class=button1>
-                <div class="restore">
-                    <button class="restorebtn">คืนอุปกรณ์</button>
+    @foreach (var item in Model)
+    {
+        if (item.timeStart.ToString("dd/MM/yyyy") != tempDay)
+        {
+            tempDay = item.timeStart.ToString("dd/MM/yyyy");
+            <h3 class="date">วันที่จอง : @item.timeStart.ToString("dd/MM/yyyy")</h3>
+            <div class="panel">
+            @foreach (var rest in Model)
+            {
+                if (rest.timeStart.ToString("dd/MM/yyyy") == tempDay)
+                {
+                <div class="content-row">
+                    <div class="equipment">@rest.toolName</div>
+                    <div class="time">@rest.timeStart.ToString("HH:mm") น. - @rest.timeExpire.ToString("HH:mm") น.</div>
+                    <div class=button1>
+                        @if(rest.isLend == false){
+                            <div class="restore">
+                                <button class="restorebtn">คืนอุปกรณ์</button>
+                            </div>
+                        }else{
+                            <div class="restored">คืนอุปกรณ์แล้ว</div>
+                        }
+                    </div>
+                    <div class=button2>
+                        @if(rest.isLend == false && DateTime.Compare(DateTime.Now, item.timeStart) < 0){
+                            <div class="cancel">
+                                <button class="cancelbtn">ยกเลิกการจอง</button>
+                            </div>
+                        }else if(rest.isLend == false && DateTime.Compare(DateTime.Now, item.timeExpire) > 0){
+                            <div class="overdue">เกินเวลา</div>
+                        }else{
+                            <div class="restored">ตรงเวลา</div>
+                        }
+                    </div>
                 </div>
+                }
+            }
             </div>
-            <div class=button2>
-                <div class="cancel">
-                    <button class="cancelbtn">ยกเลิกการจอง</button>
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="content-row">
-            <div class="equipment">ผ้าโพกตัวพี่โต 100</div>
-            <div class="time">11.30-12.30 น.</div>
-            <div class=button1>
-                <div class="restored">
-                    คืนอุปกรณ์แล้ว
-                </div>
-            </div>
-            <div class=button2>
-                <div class="overdue">
-                    เกินเวลา
-                </div>
-            </div>
-
-
-        </div>
-
-    </div>
-
+        }
+    }
 </div>

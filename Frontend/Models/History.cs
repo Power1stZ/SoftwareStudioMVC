@@ -10,18 +10,26 @@ namespace Frontend.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
-        [BsonElement("studentNumber")]
-        public string studentNumber { get; set; }
+        [BsonElement("rental")]
+        public string rental { get; set; }
 
-        [BsonElement("toolID")]
-        public string toolsID { get; set; }
+        [BsonElement("toolName")]
+        public string toolName { get; set; }
 
-        [BsonElement("time")]
+        [BsonElement("timeStart")]
         [BsonDateTimeOptions]
-        public DateTime time { get; set; }
+        public DateTime timeStart { get; set; }
 
-        [BsonElement("isExceed")]
-        public bool isExceed { get; set; }
+        [BsonElement("timeExpire")]
+        [BsonDateTimeOptions]
+        public DateTime timeExpire { get; set; }
+
+        [BsonElement("timeLend")]
+        [BsonDateTimeOptions]
+        public DateTime timeLend { get; set; }
+
+        [BsonElement("isLend")]
+        public bool isLend { get; set; }
 
 
     }
