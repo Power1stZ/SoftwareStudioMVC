@@ -3,6 +3,10 @@
 
 <head>
     <title>Software Studio</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap" rel="stylesheet">
+   
     <link rel="stylesheet" href="/css/adminSidebar.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,11 +23,16 @@
     <div class="column side">
         <h2 class="username">GGWP_first</h2>
         <ul class="sidebar">
-            <li class="sidebarlist">
-                <a>หน้าหลัก</a>
+            <li class="sidebarlist" id=@ViewData["AdPage1"]><a asp-controller="HomeAdmin"
+                    asp-action="Index">หน้าหลัก</a>
             </li>
-            <li class="sidebarlist"><a>จัดการอุปกรณ์</a></li>
-            <li class="sidebarlist"><a>จัดการ Blacklist</a></li>
+            <li class="sidebarlist" id=@ViewData["AdPage2"]><a asp-controller="HomeAdmin"
+                    asp-action="ToolStock">จัดการอุปกรณ์</a>
+            </li>
+            <li class="sidebarlist" id=@ViewData["AdPage3"]><a asp-controller="HomeAdmin"
+                    asp-action="BannedUser">จัดการ Blacklist</a>
+            </li>
+            
 
         </ul>
     </div>

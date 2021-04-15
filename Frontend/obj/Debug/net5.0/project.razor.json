@@ -15624,6 +15624,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\HomeAdmin\\ToolStock.cshtml",
+      "TargetPath": "Views\\HomeAdmin\\ToolStock.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\HomeAdmin\\BannedUser.cshtml",
+      "TargetPath": "Views\\HomeAdmin\\BannedUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\Shared\\_BookingLayout.cshtml",
       "TargetPath": "Views\\Shared\\_BookingLayout.cshtml",
       "FileKind": "mvc"
@@ -15634,8 +15644,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\Shared\\_SelectPageLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_SelectPageLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\SelectEquipment\\Index.cshtml",
       "TargetPath": "Views\\SelectEquipment\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\SelectPage\\Index.cshtml",
+      "TargetPath": "Views\\SelectPage\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

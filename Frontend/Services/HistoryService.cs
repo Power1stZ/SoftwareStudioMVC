@@ -22,7 +22,7 @@ namespace Frontend.Services
 
         public History Get(string id) =>
             _historys.Find<History>(history => history.Id == id).FirstOrDefault();
-
+            
         public List<History> GetById(string id) =>
             _historys.Find(history => history.rental == id).ToList();
 

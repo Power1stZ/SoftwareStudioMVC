@@ -113,3 +113,7 @@ E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\System.Net.Http.Formatting.dll
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Newtonsoft.Json.dll
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\HomeAdmin\BannedUser.cshtml.g.cs
+E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\HomeAdmin\ToolStock.cshtml.g.cs
+E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\SelectPage\Index.cshtml.g.cs
+E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_SelectPageLayout.cshtml.g.cs
