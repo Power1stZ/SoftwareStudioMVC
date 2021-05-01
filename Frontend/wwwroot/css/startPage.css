@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box;
+    font-family: "Prompt", sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #001d3d;
+  }
+  
+.navbarlist {
+    float: right;
+}
+  
+.navbarlist a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.navbarlist a:hover {
+    background-color: #111;
+}
+
+.wrapper{
+    display: block;
+    position: relative;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+    
+
+}
+.wrapper:before{
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-image: url('https://iittp.ac.in/pics/transitcampus/Electrical/ElectricalMachines1/Electrical%20Machines%20and%20Drives%20Lab4.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.welcomeTextBg{
+    display: block;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.400);
+    margin: 0px 80px;
+   
+}
+.welcomeTextPo{
+    position: relative;
+    height: 80px;
+   
+}
+.welcomeText{
+    position: relative;
+    text-align: center;
+    font-size: 64px;
+    color: rgb(255, 255, 255);
+    padding-top: 10px;
+}
+
+.description{
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+}
+
+.buttonArea{
+    position: relative;
+    color: rgb(255, 255, 255);
+}
+
+.startButton{
+
+    background-color: #FFC300;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    padding: 10px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 36px;
+    font-weight: bolder;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+
+.registerPage {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    background-color: #FFF1E6;
+    padding: 20px 30px;
+    width:600px;
+    height: 800px;
+    box-shadow: rgba(0, 0, 0, 0.199) 2px 2px 2px 2px;
+  }
+
+  .registerPage.active  {
+    display:block;
+  }
+
+  .registerPage.active {
+    transition:all 300ms ease-in-out;
+    transform:translate(-50%,-50%) scale(1);
+  }
+
+.registerTitle{
+    text-align: center;
+    font-size: 48px;
+   
+}
+
+
+input[type=text] {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid;
+    border-radius: 4px;
+}
+
+
+.closeRegisterPage {
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    opacity: 0.3;
+    
+  }
+
+.closeRegisterPage:hover {
+    opacity: 1;
+}
+
+.closeRegisterPage:before, .closeRegisterPage:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+ 
+}
+
+.registerPopup{
+    font-size: 20px;
+}
+
+.registerButtonArea{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.registerButton{
+    border: none;
+    background-color: #BCD4E6;
+    font-size: 36px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color:white;
+    padding: 5px 50px;
+
+}
+
+.registerButton:hover{
+    border: none;
+    color:black;
+    background-color: #99C1DE;
+
+}
+
+
+
+.closeLoginPage {
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    opacity: 0.3;
+    
+  }
+
+.closeLoginPage:hover {
+    opacity: 1;
+}
+
+.closeLoginPage:before, .closeLoginPage:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+ 
+}
+
+.close:before {
+    transform: rotate(45deg);
+  }
+.close:after {
+    transform: rotate(-45deg);
+}
+  
+
+
+.loginPage {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    background-color: #FFF1E6;
+    padding: 20px 30px;
+    width:600px;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.199) 2px 2px 2px 2px;
+  }
+
+  .loginPage.active  {
+    display:block;
+  }
+
+  .loginPage.active {
+    transition:all 300ms ease-in-out;
+    transform:translate(-50%,-50%) scale(1);
+  }
+
+.loginTitle{
+    text-align: center;
+    font-size: 48px;
+   
+}
+
+.loginPopup{
+    font-size: 20px;
+}
+
+.loginButtonArea{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.loginButton{
+    border: none;
+    background-color: #BCD4E6;
+    font-size: 36px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color:white;
+    padding: 5px 50px;
+
+}
+
+.loginButton:hover{
+    border: none;
+    color:black;
+    background-color: #99C1DE;
+
+
+}
+.loginToRegister{
+    text-align: right;
+
+}
+.text1{
+    display: inline
+}
+.text2{
+    display: inline;
+    text-decoration: underline;
+}
+.text2:hover{
+    font-weight: bold;
+}

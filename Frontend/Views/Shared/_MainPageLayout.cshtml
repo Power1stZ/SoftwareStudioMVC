@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Software Studio</title>
+    <link rel="stylesheet" href="/css/mainPage.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E" />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <ul class="navbar">
+        <li class="navbarlist"><a class="active" href="#user">ยินดีต้อนรับ 61011432 สุรสีห์ อินทรวัตร</a></li>
+        
+    </ul>
+
+  
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
