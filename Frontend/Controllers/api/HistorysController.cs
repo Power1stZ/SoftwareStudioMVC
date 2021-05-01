@@ -42,7 +42,7 @@ namespace Frontend.Controllers.api
         {
             _historyService.Create(history);
 
-            return CreatedAtRoute("GetHistory", new { id = history.Id.ToString() }, history);
+            return CreatedAtRoute("GetHistory", new { id = history.id.ToString() }, history);
         }
 
         [HttpPut("{id:length(24)}")]
@@ -70,7 +70,7 @@ namespace Frontend.Controllers.api
                 return NotFound();
             }
 
-            _historyService.Remove(history.Id);
+            _historyService.Remove(history.id);
 
             return NoContent();
         }

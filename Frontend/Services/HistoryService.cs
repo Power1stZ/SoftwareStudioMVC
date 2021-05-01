@@ -21,10 +21,10 @@ namespace Frontend.Services
             _historys.Find(history => true).ToList();
 
         public History Get(string id) =>
-            _historys.Find<History>(history => history.Id == id).FirstOrDefault();
+            _historys.Find<History>(history => history.id == id).FirstOrDefault();
             
         public List<History> GetById(string id) =>
-            _historys.Find(history => history.rental == id).ToList();
+            _historys.Find(history => history.historyID == id).ToList();
 
         public History Create(History history)
         {
@@ -33,12 +33,12 @@ namespace Frontend.Services
         }
 
         public void Update(string id, History historyIn) =>
-            _historys.ReplaceOne(history => history.Id == id, historyIn);
+            _historys.ReplaceOne(history => history.id == id, historyIn);
 
         public void Remove(History historyIn) =>
-            _historys.DeleteOne(history => history.Id == historyIn.Id);
+            _historys.DeleteOne(history => history.id == historyIn.id);
 
         public void Remove(string id) =>
-            _historys.DeleteOne(history => history.Id == id);
+            _historys.DeleteOne(history => history.id == id);
     }
 }

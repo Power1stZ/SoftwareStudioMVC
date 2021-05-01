@@ -7,19 +7,13 @@ namespace Frontend.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
-
-        [BsonElement("roomNumber")]
-        public string roomNumber { get; set; }
+        public string id { get; set; }
 
         [BsonElement("roomName")]
         public string roomName { get; set; }
 
 
-        [BsonElement("maxCount")]
-        public int maxCount { get; set; }
-
-        [BsonElement("currentRent")]
-        public int currentRent { get; set; }
+        [BsonElement("description")]
+        public string description { get; set; }
     }
 }

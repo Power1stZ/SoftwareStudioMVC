@@ -8,20 +8,20 @@
 <div class="column mid">
     @foreach (var item in Model)
     {
-        if (item.timeStart.ToString("dd/MM/yyyy") != tempDay)
+        if (item.rentTime.ToString("dd/MM/yyyy") != tempDay)
         {
-            tempDay = item.timeStart.ToString("dd/MM/yyyy");
-            <h3 class="date">วันที่จอง : @item.timeStart.ToString("dd/MM/yyyy")</h3>
+            tempDay = item.rentTime.ToString("dd/MM/yyyy");
+            <h3 class="date">วันที่จอง : @item.rentTime.ToString("dd/MM/yyyy")</h3>
             <div class="panel">
             @foreach (var rest in Model)
             {
-                if (rest.timeStart.ToString("dd/MM/yyyy") == tempDay)
+                if (rest.rentTime.ToString("dd/MM/yyyy") == tempDay)
                 {
                 <div class="content-row">
                     <div class="equipment">@rest.toolName</div>
-                    <div class="time">@rest.timeStart.ToString("HH:mm") น. - @rest.timeExpire.ToString("HH:mm") น.</div>
+                    <div class="time">@rest.rentTime.ToString("HH:mm") น. - @rest.rentTime.ToString("HH:mm") น.</div>
                     <div class=button1>
-                        @if(rest.isLend == false){
+                        @if(rest.lendTime == null){
                             <div class="restore">
                                 <button class="restorebtn">คืนอุปกรณ์</button>
                             </div>
@@ -30,11 +30,11 @@
                         }
                     </div>
                     <div class=button2>
-                        @if(rest.isLend == false && DateTime.Compare(DateTime.Now, item.timeStart) < 0){
+                        @if(rest.lendTime == null && DateTime.Compare(DateTime.Now, item.rentTime) < 0){
                             <div class="cancel">
                                 <button class="cancelbtn">ยกเลิกการจอง</button>
                             </div>
-                        }else if(rest.isLend == false && DateTime.Compare(DateTime.Now, item.timeExpire) > 0){
+                        }else if(rest.lendTime == null && DateTime.Compare(DateTime.Now, item.rentTime) > 0){
                             <div class="overdue">เกินเวลา</div>
                         }else{
                             <div class="restored">ตรงเวลา</div>

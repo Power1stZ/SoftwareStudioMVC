@@ -21,7 +21,7 @@ namespace Frontend.Services
             _tools.Find(tool => true).ToList();
 
         public Tool Get(string id) =>
-            _tools.Find<Tool>(tool => tool.Id == id).FirstOrDefault();
+            _tools.Find<Tool>(tool => tool.id == id).FirstOrDefault();
 
         public Tool Create(Tool tool)
         {
@@ -29,12 +29,12 @@ namespace Frontend.Services
             return tool;
         }
         public void Update(string id, Tool toolIn) =>
-            _tools.ReplaceOne(tool => tool.Id == id, toolIn);
+            _tools.ReplaceOne(tool => tool.id == id, toolIn);
 
         public void Remove(Tool toolIn) =>
-            _tools.DeleteOne(tool => tool.Id == toolIn.Id);
+            _tools.DeleteOne(tool => tool.id == toolIn.id);
 
         public void Remove(string id) => 
-            _tools.DeleteOne(tool => tool.Id == id);
+            _tools.DeleteOne(tool => tool.id == id);
     }
 }

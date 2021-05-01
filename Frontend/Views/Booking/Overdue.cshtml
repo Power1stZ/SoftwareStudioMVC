@@ -9,18 +9,18 @@
 <div class="column mid">
     @foreach (var item in Model)
     {
-        if (item.isLend == false && item.timeStart.ToString("dd/MM/yyyy") != tempDay && DateTime.Compare(DateTime.Now, item.timeExpire) > 0)
+        if (item.lendTime == null && item.rentTime.ToString("dd/MM/yyyy") != tempDay && DateTime.Compare(DateTime.Now, item.rentTime) > 0)
         {
-            tempDay = item.timeStart.ToString("dd/MM/yyyy");
-            <h3 class="date">วันที่จอง : @item.timeStart.ToString("dd/MM/yyyy")</h3>
+            tempDay = item.rentTime.ToString("dd/MM/yyyy");
+            <h3 class="date">วันที่จอง : @item.rentTime.ToString("dd/MM/yyyy")</h3>
             <div class="panel">
                 @foreach (var rest in Model)
                 {
-                    if (rest.timeStart.ToString("dd/MM/yyyy") == tempDay && rest.isLend == false)
+                    if (rest.rentTime.ToString("dd/MM/yyyy") == tempDay && rest.lendTime == null)
                     {
                         <div class="content-row">
                             <div class="equipment">@rest.toolName</div>
-                            <div class="time">@rest.timeStart.ToString("HH:mm") น. - @rest.timeExpire.ToString("HH:mm") น.</div>
+                            <div class="time">@rest.rentTime.ToString("HH:mm") น. - @rest.rentTime.ToString("HH:mm") น.</div>
                             <div class=button1>
                                 <div class="restore">
                                     <button class="restorebtn">คืนอุปกรณ์</button>

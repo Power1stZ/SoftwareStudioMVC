@@ -128,3 +128,7 @@ E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_SelectPageLay
 E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\StartPage\Index.cshtml.g.cs
 E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_MainPageLayout.cshtml.g.cs
 E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_StartPageLayout.cshtml.g.cs
+E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\MainPage\Index.cshtml.g.cs
+E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_MainPageLayout.cshtml.g.cs
+E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_StartPageLayout.cshtml.g.cs
+E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\StartPage\Index.cshtml.g.cs

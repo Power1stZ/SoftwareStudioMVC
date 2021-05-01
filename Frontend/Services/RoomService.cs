@@ -21,7 +21,7 @@ namespace Frontend.Services
             _rooms.Find(room => true).ToList();
 
         public Room Get(string id) =>
-            _rooms.Find<Room>(room => room.Id == id).FirstOrDefault();
+            _rooms.Find<Room>(room => room.id == id).FirstOrDefault();
 
         public Room Create(Room room)
         {
@@ -30,12 +30,12 @@ namespace Frontend.Services
         }
 
         public void Update(string id, Room roomIn) =>
-            _rooms.ReplaceOne(room => room.Id == id, roomIn);
+            _rooms.ReplaceOne(room => room.id == id, roomIn);
 
         public void Remove(Room roomIn) =>
-            _rooms.DeleteOne(room => room.Id == roomIn.Id);
+            _rooms.DeleteOne(room => room.id == roomIn.id);
 
         public void Remove(string id) => 
-            _rooms.DeleteOne(room => room.Id == id);
+            _rooms.DeleteOne(room => room.id == id);
     }
 }
