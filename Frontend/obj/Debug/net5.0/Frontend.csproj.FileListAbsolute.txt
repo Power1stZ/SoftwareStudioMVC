@@ -117,3 +117,14 @@ E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\HomeAdmin\ToolStock.cshtml.g.cs
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\SelectPage\Index.cshtml.g.cs
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_SelectPageLayout.cshtml.g.cs
+E:\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+E:\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Newtonsoft.Json.dll
+E:\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\HomeAdmin\BannedUser.cshtml.g.cs
+E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\HomeAdmin\ToolStock.cshtml.g.cs
+E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\MainPage\Index.cshtml.g.cs
+E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\SelectPage\Index.cshtml.g.cs
+E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_SelectPageLayout.cshtml.g.cs
+E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\StartPage\Index.cshtml.g.cs
+E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_MainPageLayout.cshtml.g.cs
+E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_StartPageLayout.cshtml.g.cs

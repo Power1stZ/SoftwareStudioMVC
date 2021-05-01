@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Frontend.csproj": {}
+    "E:\\SoftwareStudioMVC\\Frontend\\Frontend.csproj": {}
   },
   "projects": {
-    "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Frontend.csproj": {
+    "E:\\SoftwareStudioMVC\\Frontend\\Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Frontend.csproj",
+        "projectUniqueName": "E:\\SoftwareStudioMVC\\Frontend\\Frontend.csproj",
         "projectName": "Frontend",
-        "projectPath": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Frontend.csproj",
-        "packagesPath": "C:\\Users\\Alps\\.nuget\\packages\\",
-        "outputPath": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\obj\\",
+        "projectPath": "E:\\SoftwareStudioMVC\\Frontend\\Frontend.csproj",
+        "packagesPath": "C:\\Users\\Power1stZ\\.nuget\\packages\\",
+        "outputPath": "E:\\SoftwareStudioMVC\\Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Alps\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Power1stZ\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

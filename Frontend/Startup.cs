@@ -55,6 +55,13 @@ namespace Frontend
             {
                 endpoints.MapControllerRoute(
                     name: "default",
+                    pattern: "{controller=StartPage}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "main",
+                    pattern: "{controller=MainPage}/{action=Index}/{id?}");
+
+                endpoints.MapControllerRoute(
+                    name: "booking",
                     pattern: "{controller=Booking}/{action=Index}/{id?}");
 
                 endpoints.MapControllerRoute(

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Software Studio</title>
+    <link rel="stylesheet" href="/css/startPage.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E" />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <ul class="navbar">
+        <li class="navbarlist"><a class="active" id="login" onclick="showLogin()">เข้าสู่ระบบ</a></li>
+        <li class="navbarlist"><a class="active" id="register" onclick="showRegister()">สมัครสมาชิก</a></li>
+    </ul>
+
+    <script src="/js/startPage.js"></script>
+
+  
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
