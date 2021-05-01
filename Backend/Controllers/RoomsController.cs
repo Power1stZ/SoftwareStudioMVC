@@ -38,7 +38,7 @@ namespace Backend.Controllers
         {
             _roomService.Create(room);
 
-            return CreatedAtRoute("GetRoom", new { id = room.Id.ToString() }, room);
+            return CreatedAtRoute("GetRoom", new { id = room.id.ToString() }, room);
         }
 
         [HttpPut("{id:length(24)}")]
@@ -66,7 +66,7 @@ namespace Backend.Controllers
                 return NotFound();
             }
 
-            _roomService.Remove(room.Id);
+            _roomService.Remove(room.id);
 
             return NoContent();
         }

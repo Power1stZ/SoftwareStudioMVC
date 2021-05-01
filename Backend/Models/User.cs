@@ -7,7 +7,7 @@ namespace Backend.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string Id { get; set; }
+        public string id { get; set; }
 
         [BsonElement("studentNumber")]
         public string studentNumber { get; set; }
@@ -29,6 +29,9 @@ namespace Backend.Models
 
         [BsonElement("role")]
         public int role { get; set; }
+
+        [BsonElement("exceedCount")]
+        public int exceedCount { get; set; }
 
     }
 }

@@ -14,14 +14,14 @@ namespace Backend.Services
             var client = new MongoClient("mongodb+srv://nattapong:Power1stun@cluster0.ephtu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
             var database = client.GetDatabase("SoftwareStudio");
 
-            _tools = database.GetCollection<Tool>("Tool");
+            _tools = database.GetCollection<Tool>("Tools");
         }
 
         public List<Tool> Get() =>
             _tools.Find(tool => true).ToList();
 
         public Tool Get(string id) =>
-            _tools.Find<Tool>(tool => tool.Id == id).FirstOrDefault();
+            _tools.Find<Tool>(tool => tool.id == id).FirstOrDefault();
 
         public Tool Create(Tool tool)
         {
@@ -29,12 +29,12 @@ namespace Backend.Services
             return tool;
         }
         public void Update(string id, Tool toolIn) =>
-            _tools.ReplaceOne(tool => tool.Id == id, toolIn);
+            _tools.ReplaceOne(tool => tool.id == id, toolIn);
 
         public void Remove(Tool toolIn) =>
-            _tools.DeleteOne(tool => tool.Id == toolIn.Id);
+            _tools.DeleteOne(tool => tool.id == toolIn.id);
 
         public void Remove(string id) => 
-            _tools.DeleteOne(tool => tool.Id == id);
+            _tools.DeleteOne(tool => tool.id == id);
     }
 }

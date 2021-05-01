@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tPBMUvOUOawBuXr8hiAiCJw2RKfRVK1oVl5XBHwP3+1FEDYcEuU+3stysl+aoSv0yzgzDqaKLEPz+wg3tvjHpQ==",
+  "dgSpecHash": "s8MVdAZqk7AwituDYnbq+8a/s32CZaBRiiFW3K4K+8ZuWPq8/hDmLU67/tfbnyqvGnT1rgVf5K/zKgQwoIj/fg==",
   "success": true,
-  "projectFilePath": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Backend\\Backend.csproj",
+  "projectFilePath": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\backend\\Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alps\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
     "C:\\Users\\Alps\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

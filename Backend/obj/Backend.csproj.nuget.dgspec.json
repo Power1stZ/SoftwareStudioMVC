@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Backend\\Backend.csproj": {}
+    "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\backend\\Backend.csproj": {}
   },
   "projects": {
-    "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Backend\\Backend.csproj": {
+    "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Backend\\Backend.csproj",
+        "projectUniqueName": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Backend\\Backend.csproj",
+        "projectPath": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\backend\\Backend.csproj",
         "packagesPath": "C:\\Users\\Alps\\.nuget\\packages\\",
-        "outputPath": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Backend\\obj\\",
+        "outputPath": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Alps\\AppData\\Roaming\\NuGet\\NuGet.Config"
