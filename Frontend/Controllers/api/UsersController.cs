@@ -30,9 +30,23 @@ namespace Frontend.Controllers.api
             {
                 return NotFound();
             }
-            
+
             return user;
         }
+
+        [HttpGet("{email}/{password}", Name = "Login")]
+        public ActionResult<User> Get(string email,string password)
+        {
+            var user = _userService.Login(email,password);
+
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            return user;
+        }
+
 
         [HttpPost]
         public ActionResult<User> Create(User user)

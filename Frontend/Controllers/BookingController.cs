@@ -75,10 +75,10 @@ namespace Frontend.Controllers
             ViewData["Page1"] = "unselect";
             ViewData["Page2"] = "unselect";
             ViewData["Page3"] = "select";
-            
-            
-            IEnumerable<History> Historys = null;            
-            
+
+
+            IEnumerable<History> Historys = null;
+
             try
             {
                 using (var client = new HttpClient())
@@ -127,8 +127,8 @@ namespace Frontend.Controllers
             ViewData["Page2"] = "select";
             ViewData["Page3"] = "unselect";
 
-            IEnumerable<History> Historys = null;            
-            
+            IEnumerable<History> Historys = null;
+
             try
             {
                 using (var client = new HttpClient())
@@ -170,5 +170,7 @@ namespace Frontend.Controllers
             Console.WriteLine(Historys);
             return View(Historys);
         }
+
+
     }
 }

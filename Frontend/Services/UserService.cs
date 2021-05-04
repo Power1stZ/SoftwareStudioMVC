@@ -13,7 +13,6 @@ namespace Frontend.Services
         {
             var client = new MongoClient("mongodb+srv://nattapong:Power1stun@cluster0.ephtu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
             var database = client.GetDatabase("SoftwareStudio");
-
             _users = database.GetCollection<User>("Users");
         }
 
@@ -23,6 +22,8 @@ namespace Frontend.Services
         public User Get(string id) =>
             _users.Find<User>(user => user.id == id).FirstOrDefault();
 
+        public User Login(string email, string password) =>
+            _users.Find<User>(user => (user.email == email && user.password == password)).FirstOrDefault();
         public User Create(User user)
         {
             _users.InsertOne(user);

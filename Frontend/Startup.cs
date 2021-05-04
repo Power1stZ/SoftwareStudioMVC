@@ -75,6 +75,7 @@ namespace Frontend
                 endpoints.MapControllerRoute(
                     name: "selectPage",
                     pattern: "{controller=SelectPage}/{action=Index}/{id?}");
+                    
             });
         }
     }

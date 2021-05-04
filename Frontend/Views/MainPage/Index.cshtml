@@ -5,34 +5,38 @@
 
 <div class="buttonArea">
     <div class="gridRow">
-
-        <div class="rentBg">
+        <a asp-controller="selectEquipment" asp-action="Index">
+             <div class="rentBg">
             <div class="rentText">
                 จองห้อง / อุปกรณ์
             </div>
             <div>
-                <input type="image" src="/pic/rentIcon.png" ; class= "rentIcon">
+                <input type="image" src="/pic/rentIcon.png" ; class="rentIcon">
             </div>
-            
-        </div >
-    
-        <div class="gridColumn">
 
-            <div class= "myRent">
+        </div>
+        </a>
+       
+
+        <div class="gridColumn">
+            <a asp-controller="Booking" asp-action="Index">
+                <div class="myRent">
                 <div class="myRentText">
                     การจองของฉัน
                 </div>
                 <div>
-                      <input type="image" src="/pic/myrentIcon.png" ; class= "myRentIcon">
+                    <input type="image" src="/pic/myrentIcon.png"; class="myRentIcon">
                 </div>
             </div>
+            </a>
+            
 
-            <div class= "contactAdmin">
+            <div class="contactAdmin">
                 <div class="contactAdminText">
                     ติดต่อ admin
                 </div>
-                 <div>
-                      <input type="image" src="/pic/contactAdminIcon.png" ; class= "contactAdminIcon">
+                <div>
+                    <input type="image" src="/pic/contactAdminIcon.png" ; class="contactAdminIcon">
                 </div>
             </div>
 

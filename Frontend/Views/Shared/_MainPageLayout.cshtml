@@ -1,6 +1,6 @@
+@model Frontend.Models.User
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Software Studio</title>
     <link rel="stylesheet" href="/css/mainPage.css" />
@@ -13,7 +13,7 @@
 
 <body>
     <ul class="navbar">
-        <li class="navbarlist"><a class="active" href="#user">ยินดีต้อนรับ 61011432 สุรสีห์ อินทรวัตร</a></li>
+        <li class="navbarlist"><a class="active" href="#user">ยินดีต้อนรับ @Model.studentNumber @Model.firstName @Model.lastName </a></li>
         
     </ul>
 

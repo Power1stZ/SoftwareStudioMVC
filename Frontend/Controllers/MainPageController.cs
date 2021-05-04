@@ -2,20 +2,24 @@ using System;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Frontend.Models;
 
 namespace Frontend.Controllers
 {
     public class MainPageController : Controller
     {
-        
+
         ILogger<MainPageController> _logger;
 
-        public MainPageController(ILogger<MainPageController> logger){
+        public MainPageController(ILogger<MainPageController> logger)
+        {
             _logger = logger;
         }
 
-        public IActionResult Index(){
-            return View();
+
+        public IActionResult Index(User user)
+        {
+            return View(user);
         }
 
     }
