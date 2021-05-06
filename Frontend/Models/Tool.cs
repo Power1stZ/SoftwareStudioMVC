@@ -20,6 +20,6 @@ namespace Frontend.Models
         public string description { get; set; }
 
         [BsonElement("maxCount")]
-        public string maxCount { get; set; }
+        public int maxCount { get; set; }
     }
 }

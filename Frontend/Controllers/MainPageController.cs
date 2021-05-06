@@ -3,9 +3,16 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Frontend.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace Frontend.Controllers
 {
+    [Authorize]
     public class MainPageController : Controller
     {
 
@@ -17,9 +24,19 @@ namespace Frontend.Controllers
         }
 
 
-        public IActionResult Index(User user)
+        public IActionResult Index()
         {
-            return View(user);
+            if (User.FindFirst(ClaimTypes.Role).Value == "1")
+            {
+                return RedirectToAction("AdminMainPage");
+            }
+            Console.WriteLine(User.FindFirst(ClaimTypes.Role).Value);
+            return View();
+
+        }
+        public IActionResult AdminMainPage()
+        {
+            return View();
         }
 
     }

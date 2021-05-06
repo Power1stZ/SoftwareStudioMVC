@@ -1,162 +1,176 @@
 * {
-    box-sizing: border-box;
-    font-family: "Prompt", sans-serif;
+  box-sizing: border-box;
+  font-family: "Prompt", sans-serif;
+}
+.textdec {
+  text-decoration: none;
+  display: flex;
+}
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #001d3d;
+
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  padding: 0 5%;
 }
 
-.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #001d3d;
-  }
-  
-.navbarlist {
-    float: right;
+.filler {
+  flex: 1;
 }
-  
+/* .navbarlist:first-child {
+  margin-right: auto;
+} */
+
 .navbarlist a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
 }
-  
+
 .navbarlist a:hover {
-    background-color: #111;
+  background-color: #111;
+  cursor: pointer;
+}
+
+.navbarlist .user {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
 }
 
 body {
-    margin: 0;
-    background-color: #c5dedd;
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  background-color: #c5dedd;
+  width: 100%;
+  height: 100%;
 }
 
-.buttonArea{
-    padding: 80px 80px;
+.buttonArea {
+  padding: 80px 80px;
 }
 
-.gridRow{
-    display: grid;
-    grid-template-columns: 840px 840px ;
-    grid-gap: 80px;
-  
+.gridRow {
+  display: grid;
+  grid-template-columns: 840px 840px;
+  grid-gap: 80px;
 }
 
-.gridColumn{
-    display: grid;
-    grid-gap: 80px;
+.gridColumn {
+  display: grid;
+  grid-gap: 80px;
 }
 
-
-.rentBg{
-    display: block;
-    position: relative;
-    background-color: black
-
+.rentBg {
+  display: block;
+  position: relative;
+  background-color: black;
 }
 
-.rentBg::before{
-    content: ' ';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    background-image: url("/pic/rentbg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.rentBg::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url("/pic/rentbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.rentText{
-    position: relative;
-    text-align: center;
-    font-size: 48px;
-    color: rgb(255, 255, 255);
-    padding-top: 100px;
+.rentText {
+  position: relative;
+  text-align: center;
+  font-size: 48px;
+  color: rgb(255, 255, 255);
+  padding-top: 100px;
 }
 
-
-.rentIcon{
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.rentIcon {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
-.myRent{
-    display: block; 
-    height: 310px;  
-    position: relative;
-    background-color: black
-
+.myRent {
+  display: block;
+  height: 310px;
+  position: relative;
+  background-color: black;
 }
 
-.myRent::before{
-    content: ' ';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    background-image: url("/pic/myrentbg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.myRent::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url("/pic/myrentbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.myRentText{
-    width: 100%;
-    position: relative;
-    text-align: center;
-    font-size: 48px;
-    color: rgb(255, 255, 255);
-    padding-top: 5%;
-    
+.myRentText {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  font-size: 48px;
+  color: rgb(255, 255, 255);
+  padding-top: 5%;
 }
 
-.myRentIcon{
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
+.myRentIcon {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
 }
 
-.contactAdmin{
-    display: block;
-    height: 310px;  
-    position: relative;
-    background-color: black
+.contactAdmin {
+  display: block;
+  height: 310px;
+  position: relative;
+  background-color: black;
 }
 
-.contactAdmin::before{
-    content: ' ';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-    background-image: url("/pic/contactAdminbg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.contactAdmin::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  background-image: url("/pic/contactAdminbg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.contactAdminText{
-    width: 100%;
-    position: relative;
-    text-align: center;
-    font-size: 48px;
-    color: rgb(255, 255, 255);
-    padding-top: 5%;
+.contactAdminText {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  font-size: 48px;
+  color: rgb(255, 255, 255);
+  padding-top: 5%;
 }
 
-.contactAdminIcon{
-    position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
+.contactAdminIcon {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
 }

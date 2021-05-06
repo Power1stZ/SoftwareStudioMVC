@@ -13,13 +13,15 @@
 
 <body>
     <ul class="navbar">
-        <li class="navbarlist"><a class="active" id="login" onclick="showLogin()">เข้าสู่ระบบ</a></li>
-        <li class="navbarlist"><a class="active" id="register" onclick="showRegister()">สมัครสมาชิก</a></li>
+        <li class="navbarlist"><a class="active" id="login" asp-controller="StartPage"
+                asp-action="Login">เข้าสู่ระบบ</a></li>
+        <li class="navbarlist"><a class="active" id="register" asp-controller="StartPage"
+                asp-action="Register">สมัครสมาชิก</a></li>
     </ul>
 
     <script src="/js/startPage.js"></script>
 
-  
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

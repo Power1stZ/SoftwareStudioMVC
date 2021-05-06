@@ -1,7 +1,6 @@
 @model IEnumerable<Frontend.Models.History>
 
 @{
-
     Layout = "_BookingLayout";
     var tempDay = "";
 }
@@ -13,36 +12,65 @@
             tempDay = item.rentTime.ToString("dd/MM/yyyy");
             <h3 class="date">วันที่จอง : @item.rentTime.ToString("dd/MM/yyyy")</h3>
             <div class="panel">
-            @foreach (var rest in Model)
-            {
-                if (rest.rentTime.ToString("dd/MM/yyyy") == tempDay)
+                @foreach (var rest in Model)
                 {
-                <div class="content-row">
-                    <div class="equipment">@rest.toolName</div>
-                    <div class="time">@rest.rentTime.ToString("HH:mm") น. - @rest.rentTime.ToString("HH:mm") น.</div>
-                    <div class=button1>
-                        @if(rest.lendTime == null){
-                            <div class="restore">
-                                <button class="restorebtn">คืนอุปกรณ์</button>
+                    if (rest.rentTime.ToString("dd/MM/yyyy") == tempDay)
+                    {
+                        <div class="content-row">
+                            <div class="equipment">@rest.toolName</div>
+                            <div class="time">@rest.rentTime.ToString("HH:mm") น. - @rest.rentTime.AddHours(1).ToString("HH:mm") น.
                             </div>
-                        }else{
-                            <div class="restored">คืนอุปกรณ์แล้ว</div>
-                        }
-                    </div>
-                    <div class=button2>
-                        @if(rest.lendTime == null && DateTime.Compare(DateTime.Now, item.rentTime) < 0){
-                            <div class="cancel">
-                                <button class="cancelbtn">ยกเลิกการจอง</button>
+                            <div class=button2>
+                                @if (DateTime.Compare(rest.lendTime, rest.rentTime.AddMinutes(70)) > 0)
+                                {
+                                    <div class="overdue">@rest.lendTime.ToString("dd/MM/yyyy") @rest.lendTime.ToString("HH:mm")น.</div>
+                                }
+                                else if (rest.lendTime == rest.createTime && DateTime.Compare(DateTime.Now,
+                                rest.rentTime.AddMinutes(70)) > 0)
+                                {
+                                    <div class="overdue">เกินเวลา</div>
+                                }
+                                else if (rest.lendTime != rest.createTime && DateTime.Compare(rest.lendTime,
+                                rest.rentTime.AddMinutes(70)) <= 0)
+                                {
+                                    <div class="restored">@rest.lendTime.ToString("dd/MM/yyyy")
+                                        @rest.lendTime.ToString("HH:mm")น.</div>
+                                }
+                                else if (DateTime.Compare(DateTime.Now, rest.rentTime) >= 0 && DateTime.Compare(DateTime.Now,
+                                rest.rentTime.AddMinutes(70)) <= 0)
+                                {
+                                    <div class="regular">กรุณาคืนก่อนเวลา @rest.rentTime.AddMinutes(70).ToString("HH:mm")น.</div>
+                                }
+                                else
+                                {
+                                    <div class="regular">ยังไม่ถึงเวลาจอง</div>
+                                }
                             </div>
-                        }else if(rest.lendTime == null && DateTime.Compare(DateTime.Now, item.rentTime) > 0){
-                            <div class="overdue">เกินเวลา</div>
-                        }else{
-                            <div class="restored">ตรงเวลา</div>
-                        }
-                    </div>
-                </div>
+                            <div class=button1>
+                                @if (rest.lendTime == rest.createTime && DateTime.Compare(DateTime.Now, rest.rentTime) >= 0)
+                                {
+                                    <div class="restore">
+                                        <button class="restorebtn">คืนอุปกรณ์</button>
+                                    </div>
+                                }
+                                else if (rest.lendTime == rest.createTime && DateTime.Compare(DateTime.Now, rest.rentTime) < 0)
+                                {
+                                    <div class="cancel">
+                                        <button class="cancelbtn">ยกเลิกการจอง</button>
+                                    </div>
+                                }
+                                else if (DateTime.Compare(rest.lendTime, rest.rentTime.AddMinutes(70)) > 0)
+                                {
+                                    <div class="overdue">คืนอุปกรณ์ช้า</div>
+                                }
+                                else
+                                {
+                                    <div class="restored">คืนอุปกรณ์แล้ว</div>
+                                }
+                            </div>
+                        </div>
+                    }
                 }
-            }
             </div>
         }
     }

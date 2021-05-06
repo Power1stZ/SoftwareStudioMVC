@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
   font-family: "Prompt", sans-serif;
-  
 
   --light-body: #f3f8fe;
   --light-main: #fdfdfd;
@@ -15,8 +14,6 @@
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-
-
 .light {
   --bg-body: var(--light-body);
   --bg-main: var(--light-main);
@@ -29,16 +26,22 @@ body {
   margin: 0;
   background-color: #c5dedd;
 }
+
+.navbarlist:first-child {
+  margin-right: auto;
+}
+
 .navbar {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #001d3d;
-}
 
-.navbarlist {
-  float: left;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  padding: 0 5%;
 }
 
 .navbarlist a {
@@ -51,7 +54,17 @@ body {
 
 .navbarlist a:hover {
   background-color: #111;
+  cursor: pointer;
 }
+
+.navbarlist .user {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
 .username {
   padding: 14px 16px;
   background-color: #fff1e6;
@@ -132,7 +145,6 @@ hr {
 .column.right {
   width: 40%;
   margin: 0 5%;
- 
 }
 
 .column.mid {
@@ -161,10 +173,7 @@ hr {
 
 .panel-time {
   margin-top: 100px;
-  
 }
-
-
 
 .content-time {
   padding: 10px 5px;
@@ -208,11 +217,10 @@ hr {
   border-radius: 15px;
   outline: none;
 }
-.restorebtn:focus{
+.restorebtn:focus {
   color: #fff;
   border: 2px solid #fff;
   box-shadow: 0px 0px 0px 1px #fff;
-  
 }
 
 .restore:hover .restorebtn {
@@ -235,11 +243,10 @@ hr {
   outline: none;
 }
 
-.cancelbtn:focus{
+.cancelbtn:focus {
   color: #fff;
   border: 2px solid #fff;
   box-shadow: 0px 0px 0px 1px #fff;
- 
 }
 
 .cancel:hover .cancelbtn {
@@ -247,7 +254,6 @@ hr {
 }
 
 .select-time {
-  
   position: relative;
   display: inline-block;
   align-items: center;
@@ -267,11 +273,11 @@ hr {
   outline: none;
 }
 
-.select-timebtn:focus{
+.select-timebtn:focus {
   color: #fff;
   border: 2px solid #fff;
   box-shadow: 0px 0px 0px 1px #fff;
-  animation: anim-shadow .1s forwards;
+  animation: anim-shadow 0.1s forwards;
 }
 
 .select-time:hover .select-timebtn {
@@ -295,11 +301,10 @@ hr {
   outline: none;
 }
 
-.backbtn:focus{
+.backbtn:focus {
   color: #fff;
   border: 2px solid #fff;
   box-shadow: 0px 0px 0px 1px #fff;
-  
 }
 
 .back:hover .backbtn {
@@ -324,11 +329,10 @@ hr {
   outline: none;
 }
 
-.confirmbtn:focus{
+.confirmbtn:focus {
   color: #fff;
   border: 2px solid #fff;
   box-shadow: 0px 0px 0px 1px #fff;
-
 }
 
 .confirm:hover .confirmbtn {
@@ -341,7 +345,7 @@ hr {
   justify-content: flex-end;
 }
 .nextbtn {
-  background-color: #78C6FF;
+  background-color: #78c6ff;
   padding: 10px 20px;
   font-size: 20px;
   border: none;
@@ -350,15 +354,14 @@ hr {
   outline: none;
 }
 
-.nextbtn:focus{
+.nextbtn:focus {
   color: #fff;
   border: 2px solid #fff;
   box-shadow: 0px 0px 0px 1px #fff;
- 
 }
 
-@keyframes anim-shadow{
-  100%{
+@keyframes anim-shadow {
+  100% {
     box-shadow: 0px 0px 5px 5px #fff;
   }
 }
@@ -381,6 +384,13 @@ hr {
   text-align: center;
 }
 
+.regular {
+  padding: 10px 0px;
+  color: #000000;
+  font-weight: 700;
+  text-align: center;
+}
+
 .status-true {
   padding: 10px 0px;
   color: #00cd83;
@@ -391,18 +401,15 @@ hr {
   color: #949090;
 }
 
-
-
 .select-date {
   margin-top: 5%;
   width: 100%;
   position: relative;
   display: inline-block;
   align-items: center;
- 
 }
 .select-datebtn {
-  background-color:#ffffff;
+  background-color: #ffffff;
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -412,24 +419,22 @@ hr {
   outline: none;
 }
 
-.select-datebtn:focus{
+.select-datebtn:focus {
   border: 2px solid #fff;
   box-shadow: 0px 0px 0px 1px #fff;
-  
 }
 
-.select-datebtn div{
+.select-datebtn div {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
 .select-date:hover .select-datebtn {
- background-color: #fff1e6;
+  background-color: #fff1e6;
 }
 
-
-.img-calaendar{
+.img-calaendar {
   margin-top: 15px;
   margin-right: 5px;
   width: 30px;
@@ -448,22 +453,22 @@ hr {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   border-radius: 10px;
-  background-color: #FFF1E6;
+  background-color: #fff1e6;
   padding: 20px 30px;
   width: 400px;
   height: 320px;
   box-shadow: rgba(0, 0, 0, 0.199) 2px 2px 2px 2px;
 }
 
-.panel-confirm.active  {
-  display:block;
-}
- 
 .panel-confirm.active {
-  transition:all 300ms ease-in-out;
-  transform:translate(-50%,-50%) scale(1);
+  display: block;
+}
+
+.panel-confirm.active {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .calendar {
@@ -473,7 +478,7 @@ hr {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   overflow: hidden;
   display: none;
   /* transform: scale(1.25); */
@@ -489,7 +494,6 @@ hr {
   align-items: center;
   font-weight: 600;
   color: var(--color-txt);
- 
 }
 
 .calendar-body {
@@ -645,12 +649,6 @@ hr {
   margin-right: 10px;
   color: var(--color-txt);
 }
-
-
-
-
-
-
 
 .month-list {
   position: absolute;

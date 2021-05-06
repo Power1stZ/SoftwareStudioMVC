@@ -72,64 +72,64 @@ hr.rounded {
   background-color: #ffffff;
   text-align: center;
 }
-.toolcardarea{
-  display:flex;
+.toolcardarea {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.toolcard{
+.toolcard {
   width: 30vw;
   height: 15vw;
   margin: 30px 0px;
   background-color: #ffffff;
   border-radius: 15px;
-  position:relative;
+  position: relative;
 }
-.increasebtn{
+.increasebtn {
   cursor: pointer;
   position: absolute;
   border-top-right-radius: 15px;
   font-size: 40px;
   top: 0;
-  right:0;
+  right: 0;
   border: none;
-  background-color: #00CD83;
+  background-color: #00cd83;
   width: 25%;
   height: 50%;
 }
-.increasebtn:hover{
+.increasebtn:hover {
   border: 3px solid white;
   color: white;
 }
-.decreasebtn{
+.decreasebtn {
   cursor: pointer;
   position: absolute;
   border-bottom-right-radius: 15px;
   font-size: 40px;
   bottom: 0;
-  right:0;
+  right: 0;
   border: none;
-  background-color: #FF9999;
+  background-color: #ff9999;
   width: 25%;
   height: 50%;
 }
-.decreasebtn:hover{
+.decreasebtn:hover {
   border: 3px solid white;
   color: white;
 }
-.imgcontainer{
+.imgcontainer {
   position: absolute;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
   width: 30%;
   height: 100%;
 }
-.toolimg{
+.toolimg {
   object-fit: contain;
   width: 100%;
   height: 100%;
 }
-.tooltext{
+.tooltext {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -139,13 +139,12 @@ hr.rounded {
   height: 100%;
   text-align: center;
 }
-.actionbtnrow{
+.actionbtnrow {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
   width: 100%;
   margin: 20px 0px;
   right: 0;
-  
 }
 
 .sidebar {
@@ -308,7 +307,7 @@ hr.rounded {
 }
 
 .canclebanbutton {
-  background-color: #00CD83;
+  background-color: #00cd83;
   padding: 0px;
   font-size: 16px;
   border: none;
@@ -334,7 +333,7 @@ hr.rounded {
 }
 
 .confirmbutton {
-  background-color: #78C6FF;
+  background-color: #78c6ff;
   padding: 10px;
   margin-left: 30px;
   font-size: 16px;
@@ -370,7 +369,7 @@ hr.rounded {
 }
 
 .cancleban {
-  color: #00CD83;
+  color: #00cd83;
   margin-right: 30px;
   font-weight: 600;
 }

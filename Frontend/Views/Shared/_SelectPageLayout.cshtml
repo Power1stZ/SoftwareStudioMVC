@@ -12,7 +12,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
+
 <body>
+    <ul class="navbar">
+        <li class="navbarlist"><a class="active" asp-controller="MainPage" asp-action="Index">หน้าหลัก</a></li>
+        <li class="navbarlist">
+            <div class="user">ยินดีต้อนรับ @(User.FindFirst("studentNumber").Value) @(User.FindFirst("firstName").Value)
+                @(User.FindFirst("lastName").Value)</div>
+        </li>
+        <li class="navbarlist"><a class="active" asp-controller="StartPage" asp-action="Logout">ออกจากระบบ</a></li>
+    </ul>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -20,4 +30,5 @@
     </div>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

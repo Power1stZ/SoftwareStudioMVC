@@ -132,3 +132,17 @@ E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_MainPageLayout.cshtml.g.cs
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_StartPageLayout.cshtml.g.cs
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\StartPage\Index.cshtml.g.cs
+E:\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Humanizer.dll
+E:\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+E:\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+E:\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+E:\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+E:\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+E:\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\StartPage\Login.cshtml.g.cs
+E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\StartPage\Register.cshtml.g.cs
+E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\MainPage\adminMainPage.cshtml.g.cs
+E:\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_AdminMainPageLayout.cshtml.g.cs

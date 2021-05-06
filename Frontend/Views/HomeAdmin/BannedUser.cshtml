@@ -1,3 +1,5 @@
+@model IEnumerable<Frontend.Models.User>
+
 @{
     Layout = "_AdminSidebarLayout";
 }
@@ -10,35 +12,21 @@
     <h3 class="leftcolhead">สถานะการจอง</h3>
     <div class="midcardcontent">
         <div class="listcontent">
-            <div class="listelement">
-                <p class="booker">SwaggyTT</p>
-                <button class="canclebanbutton">ปลด BAN</button>
-            </div>
-            <hr class="solid">
-
-            <div class="listelement">
-                <p class="booker">SwaggyTT</p>
-                <button class="canclebanbutton">ปลด BAN</button>
-            </div>
-            <hr class="solid">
-
-            <div class="listelement">
-                <p class="booker">SwaggyTT</p>
-                <button class="canclebanbutton">ปลด BAN</button>
-            </div>
-            <hr class="solid">
-
-            <div class="listelement">
-                <p class="booker">SwaggyTT</p>
-                <p class="cancleban">ปลด BAN แล้ว</p>
-            </div>
-            <hr class="solid">
-
-            <div class="listelement">
-                <p class="booker">SwaggyTT</p>
-                <p class="cancleban">ปลด BAN แล้ว</p>
-            </div>
-            <hr class="solid">
+            @foreach (var user in Model)
+            {
+                <div class="listelement">
+                    <p class="booker">@user.firstName @user.lastName Exceed : @user.exceedCount</p>
+                    @if (user.isBan)
+                    {
+                        <button class="bannedbutton">ปลด BAN</button>
+                    }
+                    else
+                    {
+                        <button class="canclebutton">BAN</button>
+                    }
+                </div>
+                <hr class="solid">
+            }
 
         </div>
     </div>

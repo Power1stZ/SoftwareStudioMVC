@@ -34,7 +34,7 @@ namespace Frontend.Services
         public void Remove(Tool toolIn) =>
             _tools.DeleteOne(tool => tool.id == toolIn.id);
 
-        public void Remove(string id) => 
+        public void Remove(string id) =>
             _tools.DeleteOne(tool => tool.id == id);
     }
 }

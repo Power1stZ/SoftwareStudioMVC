@@ -9,7 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Frontend.Services;
-
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
 namespace Frontend
 {
     public class Startup
@@ -29,6 +30,19 @@ namespace Frontend
             services.AddSingleton<ToolService>();
             services.AddSingleton<RoomService>();
             services.AddControllersWithViews();
+
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+
+            })
+            .AddCookie(opts =>
+            {
+                opts.LoginPath = "/StartPage";
+                opts.AccessDeniedPath = "/MainPage";
+            });
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,10 +58,14 @@ namespace Frontend
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseHttpsRedirection();
+
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseCookiePolicy();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
@@ -71,11 +89,11 @@ namespace Frontend
                 endpoints.MapControllerRoute(
                     name: "history",
                     pattern: "{controller=Booking}/{action=Index}/{id?}");
-                    
+
                 endpoints.MapControllerRoute(
                     name: "selectPage",
                     pattern: "{controller=SelectPage}/{action=Index}/{id?}");
-                    
+
             });
         }
     }
