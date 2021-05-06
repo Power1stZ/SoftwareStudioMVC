@@ -15,13 +15,17 @@
 
 <body>
     <ul class="navbar">
-        <li class="navbarlist"><a class="active" href="#home">Home</a></li>
-        <li class="navbarlist"><a href="#news">News</a></li>
-        <li class="navbarlist"><a href="#contact">Contact</a></li>
-        <li class="navbarlist"><a href="#about">About</a></li>
+        <li class="navbarlist"><a class="active" asp-controller="MainPage" asp-action="Index">หน้าหลัก</a></li>
+        <li class="navbarlist">
+            <div class="user">ยินดีต้อนรับ @(User.FindFirst("studentNumber").Value) @(User.FindFirst("firstName").Value)
+                @(User.FindFirst("lastName").Value)</div>
+        </li>
+        <li class="navbarlist"><a class="active" asp-controller="StartPage" asp-action="Logout">ออกจากระบบ</a></li>
+
+
     </ul>
     <div class="column side">
-        <h2 class="username">GGWP_first</h2>
+        <h2 class="username">@(User.FindFirst("firstName").Value) @(User.FindFirst("lastName").Value)</h2>
         <ul class="sidebar">
             <li class="sidebarlist" id=@ViewData["Page1"]><a asp-controller="Booking"
                     asp-action="Index">การจองของฉัน</a>

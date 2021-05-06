@@ -8,30 +8,39 @@
 <div class="column mid">
     @foreach (var item in Model)
     {
-        if (item.lendTime == null && item.rentTime.ToString("dd/MM/yyyy") != tempDay)
+        if (item.lendTime == item.createTime && item.rentTime.ToString("dd/MM/yyyy") != tempDay)
         {
             tempDay = item.rentTime.ToString("dd/MM/yyyy");
             <h3 class="date">วันที่จอง : @item.rentTime.ToString("dd/MM/yyyy")</h3>
             <div class="panel">
                 @foreach (var rest in Model)
-            {
-                if(rest.rentTime.ToString("dd/MM/yyyy") == tempDay && rest.lendTime == null){
-                    <div class="content-row">
-                    <div class="equipment">@rest.toolName</div>
-                    <div class="time">@rest.rentTime.ToString("HH:mm") น.- @rest.rentTime.ToString("HH:mm") น.</div>
-                    <div class=button1>
-                        <div class="restore">
-                            <button class="restorebtn">คืนอุปกรณ์</button>
+                {
+                    if (rest.rentTime.ToString("dd/MM/yyyy") == tempDay && rest.lendTime == rest.createTime)
+                    {
+                        <div class="content-row">
+                            <div class="equipment">@rest.toolName</div>
+                            <div class="time">@rest.rentTime.ToString("HH:mm") น.- @rest.rentTime.AddHours(1).ToString("HH:mm") น.</div>
+                            @if (DateTime.Compare(DateTime.Now, rest.rentTime) > 0)
+                            {
+                                <div class=button1>
+                                    <div class="restore">
+                                        <button class="restorebtn">คืนอุปกรณ์</button>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class=button2>
+                                    <div class="cancel">
+                                        <button class="cancelbtn">ยกเลิกการจอง</button>
+                                    </div>
+                                </div>
+                            }
+
+
                         </div>
-                    </div>
-                    <div class=button2>
-                        <div class="cancel">
-                            <button class="cancelbtn">ยกเลิกการจอง</button>
-                        </div>
-                    </div>
-                </div>
+                    }
                 }
-            }
             </div>
         }
     }

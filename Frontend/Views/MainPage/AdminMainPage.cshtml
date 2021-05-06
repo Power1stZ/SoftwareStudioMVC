@@ -1,0 +1,45 @@
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_AdminMainPageLayout";
+}
+
+<div class="buttonArea">
+    <div class="gridRow">
+        <a asp-controller="SelectPage" asp-action="Index" class="textdec">
+            <div class="rentBg">
+                <div class="rentText">
+                    จองห้อง / อุปกรณ์
+                </div>
+                <div>
+                    <input type="image" src="/pic/rentIcon.png" ; class="rentIcon">
+                </div>
+
+            </div>
+        </a>
+
+
+        <div class="gridColumn">
+            <a asp-controller="Booking" asp-action="Index" class="textdec">
+                <div class="myRent">
+                    <div class="myRentText">
+                        การจองของฉัน
+                    </div>
+                    <div>
+                        <input type="image" src="/pic/myrentIcon.png" ; class="myRentIcon">
+                    </div>
+                </div>
+            </a>
+
+
+            <div class="contactAdmin">
+                <div class="contactAdminText">
+                    ติดต่อ admin
+                </div>
+                <div>
+                    <input type="image" src="/pic/contactAdminIcon.png" ; class="contactAdminIcon">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

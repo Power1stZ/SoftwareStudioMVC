@@ -1,33 +1,34 @@
 @model IEnumerable<Frontend.Models.History>
 
 @{
-
     Layout = "_BookingLayout";
-
     var tempDay = "";
 }
 <div class="column mid">
     @foreach (var item in Model)
     {
-        if (item.lendTime == null && item.rentTime.ToString("dd/MM/yyyy") != tempDay && DateTime.Compare(DateTime.Now, item.rentTime) > 0)
+        if (item.lendTime == item.createTime && item.rentTime.ToString("dd/MM/yyyy") != tempDay &&
+        DateTime.Compare(DateTime.Now,
+        item.rentTime) > 0)
         {
             tempDay = item.rentTime.ToString("dd/MM/yyyy");
             <h3 class="date">วันที่จอง : @item.rentTime.ToString("dd/MM/yyyy")</h3>
             <div class="panel">
                 @foreach (var rest in Model)
                 {
-                    if (rest.rentTime.ToString("dd/MM/yyyy") == tempDay && rest.lendTime == null)
+                    if (rest.rentTime.ToString("dd/MM/yyyy") == tempDay && rest.lendTime == rest.createTime)
                     {
                         <div class="content-row">
                             <div class="equipment">@rest.toolName</div>
-                            <div class="time">@rest.rentTime.ToString("HH:mm") น. - @rest.rentTime.ToString("HH:mm") น.</div>
+                            <div class="time">@rest.rentTime.ToString("HH:mm") น. - @rest.rentTime.AddHours(1).ToString("HH:mm") น.
+                            </div>
+                            <div class=button2>
+                                <div class="overdue">เกินเวลา</div>
+                            </div>
                             <div class=button1>
                                 <div class="restore">
                                     <button class="restorebtn">คืนอุปกรณ์</button>
                                 </div>
-                            </div>
-                            <div class=button2>
-                                <div class="overdue">เกินเวลา</div>
                             </div>
                         </div>
                     }

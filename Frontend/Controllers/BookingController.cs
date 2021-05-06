@@ -7,16 +7,28 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Frontend.Models;
 using System.Net.Http;
+using Newtonsoft.Json;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Http;
+using System.Security.Claims;
+using Frontend.Services;
 
 namespace Frontend.Controllers
 {
+    [Authorize]
     public class BookingController : Controller
     {
         private readonly ILogger<BookingController> _logger;
+        private readonly HistoryService _historyService;
+        private readonly IHttpContextAccessor _httpContextAcessor;
 
-        public BookingController(ILogger<BookingController> logger)
+        public BookingController(ILogger<BookingController> logger, HistoryService historyService, IHttpContextAccessor httpContextAccessor)
         {
             _logger = logger;
+            _historyService = historyService;
+            _httpContextAcessor = httpContextAccessor;
 
         }
 
@@ -25,49 +37,15 @@ namespace Frontend.Controllers
             ViewData["Page1"] = "select";
             ViewData["Page2"] = "unselect";
             ViewData["Page3"] = "unselect";
-
-            IEnumerable<History> Historys = null;
-
-            try
+            var data = _historyService.GetById(User.FindFirst("studentNumber").Value);
+            if (data != null)
             {
-                using (var client = new HttpClient())
-                {
-                    client.BaseAddress = new Uri("https://localhost:5001/api/");
-                    //HTTP GET
-                    var responseTask = client.GetAsync("Historys/61010844");
-                    responseTask.Wait();
-
-                    var result = responseTask.Result;
-                    if (result.IsSuccessStatusCode)
-                    {
-                        var readTask = result.Content.ReadAsAsync<IList<History>>();
-                        readTask.Wait();
-
-                        Historys = readTask.Result;
-                    }
-                    else //web api sent error response 
-                    {
-                        //log response status here..
-
-                        Historys = Enumerable.Empty<History>();
-
-                        ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
-                    }
-                }
-
-                //Some risky client call that will call parallell code / async /TPL or in some way cause an AggregateException 
-
+                List<History> sort = data.OrderByDescending(history => history.createTime).ToList();
+                //Console.WriteLine(JsonConvert.SerializeObject(sort, Formatting.Indented));
+                return View(sort);
             }
-            catch (AggregateException err)
-            {
-                foreach (var errInner in err.InnerExceptions)
-                {
-                    Debug.WriteLine(errInner); //this will call ToString() on the inner execption and get you message, stacktrace and you could perhaps drill down further into the inner exception of it if necessary 
-                }
-            }
-            Console.WriteLine("pass");
-            Console.WriteLine(Historys);
-            return View(Historys);
+
+            return View("ไม่มีรายการจอง");
         }
 
         public IActionResult History()
@@ -77,48 +55,15 @@ namespace Frontend.Controllers
             ViewData["Page3"] = "select";
 
 
-            IEnumerable<History> Historys = null;
-
-            try
+            var data = _historyService.GetById(User.FindFirst("studentNumber").Value);
+            if (data != null)
             {
-                using (var client = new HttpClient())
-                {
-                    client.BaseAddress = new Uri("https://localhost:5001/api/");
-                    //HTTP GET
-                    var responseTask = client.GetAsync("Historys/61010844");
-                    responseTask.Wait();
-
-                    var result = responseTask.Result;
-                    if (result.IsSuccessStatusCode)
-                    {
-                        var readTask = result.Content.ReadAsAsync<IList<History>>();
-                        readTask.Wait();
-
-                        Historys = readTask.Result;
-                    }
-                    else //web api sent error response 
-                    {
-                        //log response status here..
-
-                        Historys = Enumerable.Empty<History>();
-
-                        ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
-                    }
-                }
-
-                //Some risky client call that will call parallell code / async /TPL or in some way cause an AggregateException 
-
+                List<History> sort = data.OrderByDescending(history => history.createTime).ToList();
+                //Console.WriteLine(JsonConvert.SerializeObject(sort, Formatting.Indented));
+                return View(sort);
             }
-            catch (AggregateException err)
-            {
-                foreach (var errInner in err.InnerExceptions)
-                {
-                    Debug.WriteLine(errInner); //this will call ToString() on the inner execption and get you message, stacktrace and you could perhaps drill down further into the inner exception of it if necessary 
-                }
-            }
-            Console.WriteLine("pass");
-            Console.WriteLine(Historys);
-            return View(Historys);
+
+            return View("ไม่มีรายการจอง");
         }
 
         public IActionResult Overdue()
@@ -127,48 +72,15 @@ namespace Frontend.Controllers
             ViewData["Page2"] = "select";
             ViewData["Page3"] = "unselect";
 
-            IEnumerable<History> Historys = null;
-
-            try
+            var data = _historyService.GetById(User.FindFirst("studentNumber").Value);
+            if (data != null)
             {
-                using (var client = new HttpClient())
-                {
-                    client.BaseAddress = new Uri("https://localhost:5001/api/");
-                    //HTTP GET
-                    var responseTask = client.GetAsync("Historys/61010844");
-                    responseTask.Wait();
-
-                    var result = responseTask.Result;
-                    if (result.IsSuccessStatusCode)
-                    {
-                        var readTask = result.Content.ReadAsAsync<IList<History>>();
-                        readTask.Wait();
-
-                        Historys = readTask.Result;
-                    }
-                    else //web api sent error response 
-                    {
-                        //log response status here..
-
-                        Historys = Enumerable.Empty<History>();
-
-                        ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
-                    }
-                }
-
-                //Some risky client call that will call parallell code / async /TPL or in some way cause an AggregateException 
-
+                List<History> sort = data.OrderByDescending(history => history.createTime).ToList();
+                //Console.WriteLine(JsonConvert.SerializeObject(sort, Formatting.Indented));
+                return View(sort);
             }
-            catch (AggregateException err)
-            {
-                foreach (var errInner in err.InnerExceptions)
-                {
-                    Debug.WriteLine(errInner); //this will call ToString() on the inner execption and get you message, stacktrace and you could perhaps drill down further into the inner exception of it if necessary 
-                }
-            }
-            Console.WriteLine("pass");
-            Console.WriteLine(Historys);
-            return View(Historys);
+
+            return View("ไม่มีรายการจอง");
         }
 
 

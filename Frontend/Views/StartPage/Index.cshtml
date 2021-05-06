@@ -6,77 +6,27 @@
 <script src="/js/startPage.js"></script>
 
 <div class=wrapper>
-    <div class="welcomeTextPo"></div>
-    <div class="welcomeTextBg">
+    <div class="blackground-0">
+        <div class="welcomeTextPo"></div>
+        <div class="welcomeTextBg">
 
-        <div class="welcomeText">
-            ยินดีต้อนรับเข้าสู่เว็ปไซต์สำหรับจองอุปกรณ์
-        </div>
-    </div>
-    <div class="description" style="white-space: pre">
-
-        เว็ปไซต์นี้จัดทำขึ้นสำหรับจองอุปกรณ์ห้องแลป
-        ของสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-        รายวิชา 01076025 Software Studio
-
-    </div>
-    <div class="buttonArea">
-        <button class="startButton" id="getStart" onclick="showLogin()"> เริ่มต้นใช้งาน </button>
-    </div>
-
-    <div class="registerPage" id="registerPage">
-
-        <a href="#" class="closeRegisterPage" onclick="showRegister()">X</a>
-
-        <div class="registerTitle">
-            สมัครสมาชิก
-        </div>
-
-        <form class="registerPopup" method="post" asp-action="Register">
-            <label for="firstName">ชื่อ</label>
-            <input type="text" id="firstName" name="firstName">
-            <label for="lastName">นามสกุล</label>
-            <input type="text" id="lasttName" name="lastName">
-            <label for="studentNumber">รหัสนักศึกษา</label>
-            <input type="text" id="studentNumber" name="studentNumber">
-            <label for="email">อีเมลล์</label>
-            <input type="text" id="email" name="email">
-            <label for="password">รหัสผ่าน</label>
-            <input type="text" id="password" name="password">
-            <label for="confirmPassword">ยินยันรหัสผ่าน</label>
-            <input type="text" id="confirmPassword" name="confirmPassword">
-            <div class="registerButtonArea">
-
-                <button class="registerButton">ยืนยันการสมัคร</button>
+            <div class="welcomeText">
+                ยินดีต้อนรับเข้าสู่เว็ปไซต์สำหรับจองอุปกรณ์
             </div>
-        </form>
+        </div>
+        <div class="description" style="white-space: pre">
 
+            เว็ปไซต์นี้จัดทำขึ้นสำหรับจองอุปกรณ์ห้องแลป
+            ของสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+            รายวิชา 01076025 Software Studio
 
+        </div>
+        <div class="buttonArea">
+            <a asp-controller="StartPage" asp-action="Login">
+                <button class="startButton" id="getStart"> เริ่มต้นใช้งาน </button>
+            </a>
+
+        </div>
     </div>
 
-
-    <div class="loginPage" id="loginPage">
-
-        <a href="#" class="closeLoginPage" onclick="showLogin()">X</a>
-
-        <div class="loginTitle">
-            เข้าสู่ระบบ
-        </div>
-
-        <form class="loginPopup" method="post" asp-action="Login">
-            <label for="email">อีเมลล์</label>
-            <input type="text" id="email" name="email">
-            <label for="password">รหัสผ่าน</label>
-            <input type="text" id="password" name="password">
-            <div class="loginButtonArea">
-                <button class="loginButton">เข้าสู่ระบบ</button>
-            </div>
-
-        </form>
-        <div class="loginToRegister">
-            <div class="text1"> ไม่มีบัญชีผู้ใช้ ? </div>
-            <div class="text2" onclick="showRegister()">สมัครสมาชิก</div>
-        </div>
-
-
-    </div>
+</div>

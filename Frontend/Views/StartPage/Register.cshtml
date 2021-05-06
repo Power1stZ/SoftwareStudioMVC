@@ -1,0 +1,75 @@
+@model Frontend.Models.Register;
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_StartPageLayout";
+}
+
+<div class="bgBlur">
+    <div class=wrapper>
+        <div class="welcomeTextPo"></div>
+        <div class="welcomeTextBg">
+
+            <div class="welcomeText">
+                ยินดีต้อนรับเข้าสู่เว็ปไซต์สำหรับจองอุปกรณ์
+            </div>
+        </div>
+        <div class="description" style="white-space: pre">
+
+            เว็ปไซต์นี้จัดทำขึ้นสำหรับจองอุปกรณ์ห้องแลป
+            ของสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+            รายวิชา 01076025 Software Studio
+
+        </div>
+    </div>
+</div>
+<div class="blackground">
+    <div class="registerPage" id="registerPage">
+
+        <a class="closeRegisterPage" asp-controller="StartPage" asp-action="Index">X</a>
+
+        <div class="registerTitle">
+            สมัครสมาชิก
+        </div>
+
+        <form class="registerPopup" method="post" asp-action="Register">
+            <label for="firstName">ชื่อ</label>
+            <input asp-for="firstName" type="text" id="firstName" name="firstName">
+            <div class="spanSpace">
+                <span asp-validation-for="firstName" class="spanValidation"></span>
+            </div>
+            <label for="lastName">นามสกุล</label>
+            <input asp-for="lastName" type="text" id="lastName" name="lastName">
+            <div class="spanSpace">
+                <span asp-validation-for="lastName" class="spanValidation"></span>
+            </div>
+            <label for="studentNumber">รหัสนักศึกษา</label>
+            <input asp-for="studentNumber" type="text" id="studentNumber" name="studentNumber">
+            <div class="spanSpace">
+                <span asp-validation-for="studentNumber" class="spanValidation"></span>
+            </div>
+            <label for="email">อีเมล</label>
+            <input asp-for="email" type="text" id="email" name="email">
+            <div class="spanSpace">
+                <span asp-validation-for="email" class="spanValidation"></span>
+            </div>
+            <label for="password">รหัสผ่าน</label>
+            <input asp-for="password" type="password" id="password" name="password">
+            <div class="spanSpace">
+                <span asp-validation-for="password" class="spanValidation"></span>
+            </div>
+            <label for="confirmPassword">ยืนยันรหัสผ่าน</label>
+            <input asp-for="confirmPassword" type="password" id="confirmPassword" name="confirmPassword">
+            <div class="spanSpace">
+                <span asp-validation-for="confirmPassword" class="spanValidation"></span>
+            </div>
+            <div class="spanSpace">
+                <div asp-validation-summary="ModelOnly" class="divValidation"></div>
+            </div>
+            <div class="registerButtonArea">
+                <button class="registerButton">ยืนยันการสมัคร</button>
+            </div>
+        </form>
+
+    </div>
+</div>
