@@ -434,7 +434,7 @@ hr {
   background-color: #fff1e6;
 }
 
-.img-calaendar {
+.img-calendar {
   margin-top: 15px;
   margin-right: 5px;
   width: 30px;
@@ -689,4 +689,10 @@ hr {
 
 .month-list > div > div:hover {
   background-color: var(--color-hover);
+}
+
+.no-list{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
 }

@@ -6,42 +6,49 @@
 }
 
 <div class="column mid">
-    @foreach (var item in Model)
-    {
-        if (item.lendTime == item.createTime && item.rentTime.ToString("dd/MM/yyyy") != tempDay)
+    @if(Model != null && Model.Any()){
+        foreach (var item in Model)
         {
-            tempDay = item.rentTime.ToString("dd/MM/yyyy");
-            <h3 class="date">วันที่จอง : @item.rentTime.ToString("dd/MM/yyyy")</h3>
-            <div class="panel">
-                @foreach (var rest in Model)
-                {
-                    if (rest.rentTime.ToString("dd/MM/yyyy") == tempDay && rest.lendTime == rest.createTime)
+            if (item.lendTime == item.createTime && item.rentTime.ToString("dd/MM/yyyy") != tempDay)
+            {
+                tempDay = item.rentTime.AddHours(7).ToString("dd/MM/yyyy");
+                <h3 class="date">วันที่จอง : @item.rentTime.AddHours(7).ToString("dd/MM/yyyy")</h3>
+                <div class="panel">
+                    @foreach (var rest in Model)
                     {
-                        <div class="content-row">
-                            <div class="equipment">@rest.toolName</div>
-                            <div class="time">@rest.rentTime.ToString("HH:mm") น.- @rest.rentTime.AddHours(1).ToString("HH:mm") น.</div>
-                            @if (DateTime.Compare(DateTime.Now, rest.rentTime) > 0)
-                            {
-                                <div class=button1>
-                                    <div class="restore">
-                                        <button class="restorebtn">คืนอุปกรณ์</button>
+                        if (rest.rentTime.ToString("dd/MM/yyyy") == tempDay && rest.lendTime == rest.createTime)
+                        {
+                            <div class="content-row">
+                                <div class="equipment">@rest.toolName</div>
+                                <div class="time">@rest.rentTime.AddHours(7).ToString("HH:mm") น.- @rest.rentTime.AddHours(8).ToString("HH:mm") น.</div>
+                                @if (DateTime.Compare(DateTime.Now, rest.rentTime) > 0)
+                                {
+                                    <div class=button1>
+                                        <div class="restore">
+                                            <a asp-controller="Booking" asp-action="LendIndex" asp-route-id="@rest.id">
+                                                <button class="restorebtn">คืนอุปกรณ์</button>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            }
-                            else
-                            {
-                                <div class=button2>
-                                    <div class="cancel">
-                                        <button class="cancelbtn">ยกเลิกการจอง</button>
+                                }
+                                else
+                                {
+                                    <div class=button2>
+                                        <div class="cancel">
+                                            <a asp-controller="Booking" asp-action="LendIndex" asp-route-id = "@rest.id">
+                                                <button class="cancelbtn">ยกเลิกการจอง</button>
+                                            </a>  
+                                        </div>
                                     </div>
-                                </div>
-                            }
-
-
-                        </div>
+                                }
+                            </div>
+                        }
                     }
-                }
-            </div>
+                </div>
+            }
         }
+    }else{
+        <div class="no-list">ไม่มีรายการจอง</div>
     }
+    
 </div>

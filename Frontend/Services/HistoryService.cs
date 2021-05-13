@@ -26,6 +26,9 @@ namespace Frontend.Services
         public List<History> GetById(string studentNumber) =>
             _historys.Find(history => history.studentNumber == studentNumber).ToList();
 
+        public List<History> GetByToolName(string toolName) =>
+            _historys.Find(history => history.toolName == toolName).ToList();
+
         public History Create(History history)
         {
             _historys.InsertOne(history);

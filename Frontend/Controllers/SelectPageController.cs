@@ -33,14 +33,14 @@ namespace Frontend.Controllers
             _httpContextAcessor = httpContextAccessor;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string id="DataStruc Lab")
         {
             dynamic mymodel = new ExpandoObject();
             mymodel.rooms = _roomService.Get();
-            mymodel.tools = _toolService.Get();
-            if (mymodel.rooms != null)
-            {
-                //Console.WriteLine(JsonConvert.SerializeObject(mymodel.rooms, Formatting.Indented));
+            mymodel.tools = _toolService.GetByRoom(id);
+            // Console.WriteLine(id);
+            // Console.WriteLine(JsonConvert.SerializeObject(mymodel.tools, Formatting.Indented));
+            if(mymodel.rooms != null){
                 return View(mymodel);
             }
             return View("ไม่มีห้องให้ใช้งาน");

@@ -1,4 +1,5 @@
 @model dynamic
+
 @{
     Layout = "_SelectPageLayout";
 }
@@ -7,18 +8,19 @@
     <div class="text-divider">เลือกห้อง</div>
     <div class="listbutton">
         @foreach (var item in Model.rooms)
-        {
-            <button class="roombtn">@item.roomName</button>
+        {   
+            <a asp-controller="SelectPage" asp-action="Index" asp-route-id="@item.roomName">
+                <button class="roombtn">@item.roomName</button>
+            </a>
         }
-
     </div>
     <div class="text-divider">รายการอุปกรณ์</div>
     <div class="myButton">
-        <INPUT type="submit" name="sss" value="">
-        <INPUT type="submit" name="sss" value="">
-        <INPUT type="submit" name="sss" value="">
-        <INPUT type="submit" name="sss" value="">
-        <INPUT type="submit" name="sss" value="">
-        <INPUT type="submit" name="sss" value="">
+        @foreach (var item in Model.tools)
+        {
+            <a asp-controller="SelectEquipment" asp-action="Index" asp-route-id="@item.id">
+                <INPUT type="submit" name="sss" value="@item.toolName">
+            </a>
+        }
     </div>
 </div>

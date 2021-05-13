@@ -22,6 +22,9 @@ namespace Frontend.Services
         public User Get(string id) =>
             _users.Find<User>(user => user.id == id).FirstOrDefault();
 
+        public User GetById(string studentNumber) =>
+            _users.Find<User>(user => user.studentNumber == studentNumber).FirstOrDefault();
+
         public User Login(string email, string password) =>
             _users.Find<User>(user => (user.email == email && user.password == password)).FirstOrDefault();
         public User Create(User user)

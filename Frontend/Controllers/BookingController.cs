@@ -23,13 +23,14 @@ namespace Frontend.Controllers
         private readonly ILogger<BookingController> _logger;
         private readonly HistoryService _historyService;
         private readonly IHttpContextAccessor _httpContextAcessor;
+        private readonly UserService _userService;
 
-        public BookingController(ILogger<BookingController> logger, HistoryService historyService, IHttpContextAccessor httpContextAccessor)
+        public BookingController(ILogger<BookingController> logger, HistoryService historyService, IHttpContextAccessor httpContextAccessor, UserService userService)
         {
             _logger = logger;
             _historyService = historyService;
             _httpContextAcessor = httpContextAccessor;
-
+            _userService = userService;
         }
 
         public IActionResult Index()
@@ -40,9 +41,15 @@ namespace Frontend.Controllers
             var data = _historyService.GetById(User.FindFirst("studentNumber").Value);
             if (data != null)
             {
-                List<History> sort = data.OrderByDescending(history => history.createTime).ToList();
-                //Console.WriteLine(JsonConvert.SerializeObject(sort, Formatting.Indented));
-                return View(sort);
+                List<History> sort = data.OrderByDescending(history => history.rentTime).ToList();
+                List<History> result = new List<History>();
+                foreach(var item in sort){
+                    if(DateTime.Compare(DateTime.Now, item.rentTime.AddMinutes(70)) <= 0 && item.lendTime == item.createTime){
+                        result.Add(item);
+                    }
+                }
+                // Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+                return View(result);
             }
 
             return View("ไม่มีรายการจอง");
@@ -58,7 +65,7 @@ namespace Frontend.Controllers
             var data = _historyService.GetById(User.FindFirst("studentNumber").Value);
             if (data != null)
             {
-                List<History> sort = data.OrderByDescending(history => history.createTime).ToList();
+                List<History> sort = data.OrderByDescending(history => history.rentTime).ToList();
                 //Console.WriteLine(JsonConvert.SerializeObject(sort, Formatting.Indented));
                 return View(sort);
             }
@@ -75,14 +82,60 @@ namespace Frontend.Controllers
             var data = _historyService.GetById(User.FindFirst("studentNumber").Value);
             if (data != null)
             {
-                List<History> sort = data.OrderByDescending(history => history.createTime).ToList();
+                List<History> sort = data.OrderByDescending(history => history.rentTime).ToList();
+                List<History> result = new List<History>();
+                foreach(var item in sort){
+                    if(DateTime.Compare(DateTime.Now, item.rentTime.AddMinutes(70)) > 0 && item.lendTime == item.createTime){
+                        result.Add(item);
+                    }
+                }
                 //Console.WriteLine(JsonConvert.SerializeObject(sort, Formatting.Indented));
-                return View(sort);
+                return View(result);
             }
 
             return View("ไม่มีรายการจอง");
         }
 
+        public IActionResult LendHistory(string id)
+        {
+            History tempHistory = _historyService.Get(id);
+            Console.WriteLine(tempHistory.studentNumber);
+            User tempUser = _userService.GetById(tempHistory.studentNumber);
+            // if(temp.rentTIEnumerable.AddHours(1))
+            tempHistory.lendTime = DateTime.Now;
+            if (DateTime.Compare(tempHistory.lendTime, tempHistory.rentTime.AddMinutes(70)) > 0) {
+                tempUser.exceedCount = tempUser.exceedCount + 1;
+            }
+            //Console.WriteLine(JsonConvert.SerializeObject(temp, Formatting.Indented));
+            _userService.Update(tempUser.id,tempUser);
+            _historyService.Update(tempHistory.id,tempHistory);
+            return View("History");
+        }
 
+        public IActionResult LendOverdue(string id)
+        {
+            History tempHistory = _historyService.Get(id);
+            Console.WriteLine(tempHistory.studentNumber);
+            User tempUser = _userService.GetById(tempHistory.studentNumber);
+            // if(temp.rentTIEnumerable.AddHours(1))
+            tempHistory.lendTime = DateTime.Now;
+            if (DateTime.Compare(tempHistory.lendTime, tempHistory.rentTime.AddMinutes(70)) > 0) {
+                tempUser.exceedCount = tempUser.exceedCount + 1;
+            }
+            //Console.WriteLine(JsonConvert.SerializeObject(temp, Formatting.Indented));
+            _userService.Update(tempUser.id,tempUser);
+            _historyService.Update(tempHistory.id,tempHistory);
+            return View("Overdue");
+        }
+
+        public IActionResult LendIndex(string id)
+        {
+            History tempHistory = _historyService.Get(id);
+            // if(temp.rentTIEnumerable.AddHours(1))
+            tempHistory.lendTime = DateTime.Now;
+            //Console.WriteLine(JsonConvert.SerializeObject(temp, Formatting.Indented));
+            _historyService.Update(tempHistory.id,tempHistory);
+            return View("Index");
+        }
     }
 }

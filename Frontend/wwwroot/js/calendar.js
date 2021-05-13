@@ -4,7 +4,14 @@ let selectdatebutton = document.querySelector('.select-datebtn')
 
 
 selectdatebutton.addEventListener("click", function () {
-    calendar.style.display = 'block';
+    if(calendar.style.display === 'block'){
+        calendar.style.display = 'none';
+        // console.log("none");
+    }else{
+        calendar.style.display = 'block';
+        // console.log("block");
+    }
+    // console.log("test");
 });
 
 function togglePopup(){
@@ -29,6 +36,7 @@ generateCalendar = (month, year) => {
     let calendar_days = calendar.querySelector('.calendar-days')
     let calendar_header_year = calendar.querySelector('#year')
     let showdate = document.getElementById("show-date")
+    let showCurrentDay = document.getElementById("show-curr")
     let days_of_month = [31, getFebDays(year), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
     calendar_days.innerHTML = ''
@@ -63,15 +71,16 @@ generateCalendar = (month, year) => {
         }
         
         day.onclick = () => {
-            console.log(day.innerText)
-            showdate.innerHTML = day.innerText+" "+ curr_month +" " +year;
+            // console.log(day.innerText)
+            showdate.innerHTML = day.innerText+" "+ curr_month + " " + year;
+            showCurrentDay.innerHTML = "ตารางวันที่ : " + day.innerText +" "+ curr_month + " " + year;
             calendar.style.display = 'none';
         }
         calendar_days.appendChild(day)
     }
     
     showdate.innerHTML = currDate.getDate()+" "+ curr_month +" " +year;
-    
+    showCurrentDay.innerHTML = "ตารางวันที่ : " + currDate.getDate()+" "+ curr_month +" " + year;
     
 }
 

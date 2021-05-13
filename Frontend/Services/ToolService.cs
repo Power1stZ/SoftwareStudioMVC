@@ -23,6 +23,9 @@ namespace Frontend.Services
         public Tool Get(string id) =>
             _tools.Find<Tool>(tool => tool.id == id).FirstOrDefault();
 
+        public List<Tool> GetByRoom(string roomName) =>
+            _tools.Find(tool => tool.room == roomName).ToList();
+
         public Tool Create(Tool tool)
         {
             _tools.InsertOne(tool);

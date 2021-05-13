@@ -1,14 +1,17 @@
+@model dynamic
+
 @{
     ViewData["Title"] = "Home Page";
     Layout = "_TopNavBarLayout";
 }
 
-<div class="light">
 
+<div class="light">
+    @* <h3 id = "toolId">@Model.tools.id</h3> *@
     <div class="column left">
-        <h2 class="username">ห้องที่ : 1</h2>
+        <h2 class="username">ห้อง : @Model.tools.room</h2>
         <div class="schedule-date">
-            <h3>ตารางวันที่ : 4/4/2021</h3>
+            <h3 id="show-curr"></h3>
         </div>
         <div class="panel">
             <div class="content-row">
@@ -38,18 +41,18 @@
             </div>
         </div>
         <div class="back">
-            <a asp-controller="SelectPage" asp-action="Index">
+            <a asp-controller="SelectPage" asp-action="Index" asp-route-id="@Model.tools.room">
                 <button class="backbtn">ก่อนหน้า</button>
             </a>
         </div>
     </div>
     <div class="column right">
-        <h2 class="username">อุปกรณ์ : เชิงเทียน</h2>
+        <h2 class="username">อุปกรณ์ : @Model.tools.toolName</h2>
         <div class="select-date">
             <button class="select-datebtn">
                 <div>
-                    <img class="img-calaendar" src="img/calendar-alt-solid.svg" alt="" />
-                    <h3 id="show-date"></h3>
+                    <img class="img-calendar" src="/pic/calendar-alt-solid.svg" alt="" />
+                    <h3 id="show-date" onchange="setHiddenValue()"></h3>
                 </div>
             </button>
         </div>
@@ -129,3 +132,13 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    function setHiddenValue(){
+        var selectDate = document.getElementById("show-date").innerText;
+        console.log(selectDate);
+    }
+    @* var tool = document.getElementById("toolId").innerText; *@
+    //alert("/SelectPage/Index/"+tool+"/"+selectDate);
+    @* console.log("/SelectEquipment/Index/"+tool+"/"+selectDate); *@
+    //window.location.replace("/SelectEquipment/Index?tool="+tool+"&date="+selectDate);
+</script>
