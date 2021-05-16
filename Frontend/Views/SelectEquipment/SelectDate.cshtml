@@ -1,0 +1,152 @@
+@model dynamic
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_TopNavBarLayout";
+    @* var csDate = Request.Form["inputDate"]; *@
+}
+
+
+<div class="light">
+    <div class="column left">
+        <h2 class="username">ห้อง : @Model.tools.room</h2>
+        <div class="schedule-date">
+            <h3 id="show-curr">ตารางวันที่ : @Model.historys[0].rentTime.ToString("dd/MM/yyyy")</h3>
+        </div>
+        <div class="panel">
+            <div class="content-row">
+                <div class="time">9.30-10.30 น.</div>
+                <div class="status-true">5 available</div>
+            </div>
+            <div class="content-row">
+                <div class="time">10.30-11.30 น.</div>
+                <div class="status-true">5 available</div>
+            </div>
+            <div class="content-row">
+                <div class="time">11.30-12.30 น.</div>
+                <div class="status-true">5 available</div>
+            </div>
+            <hr class="hr-thin" />
+            <div class="content-row">
+                <div class="time">13.30-14.30 น.</div>
+                <div class="status-false">0 available</div>
+            </div>
+            <div class="content-row">
+                <div class="time">14.30-15.30 น.</div>
+                <div class="status-true">5 available</div>
+            </div>
+            <div class="content-row">
+                <div class="time">15.30-16.30 น.</div>
+                <div class="status-false">0 available</div>
+            </div>
+        </div>
+        <div class="back">
+            <a asp-controller="SelectPage" asp-action="Index" asp-route-id="@Model.tools.room">
+                <button class="backbtn">ก่อนหน้า</button>
+            </a>
+        </div>
+    </div>
+    <div class="column right">
+        <h2 class="username">อุปกรณ์ : @Model.tools.toolName</h2>
+        <div class="select-date">
+            <button class="select-datebtn">
+                <div>
+                    <img class="img-calendar" src="/pic/calendar-alt-solid.svg" alt="" />
+                    <h3 id="show-date">เลือกวันที่ต้องการจองนะคะ</h3>
+                    <form method="post" asp-controller="SelectEquipment" asp-action="SelectDate">
+                        <input type="hidden" id="datefield" name="date" required>
+                        <input type="hidden" name="toolName" value="@Model.tools.toolName">
+                        <button type="submit">เช็คอุปกรณ์</button>
+                    </form>
+                </div>
+            </button>
+        </div>
+        <div class="panel-time">
+            <div class="content-time">
+                <div class="select-time">
+                    <button class="select-timebtn" id="t1" onclick="selectTime(id)">9.30 - 10.30</button>
+                </div>
+                <div class="select-time">
+                    <button class="select-timebtn" id="t2" onclick="selectTime(id)">10.30 - 11.30</button>
+                </div>
+                <div class="select-time">
+                    <button class="select-timebtn" id="t3" onclick="selectTime(id)">11.30 - 12.30</button>
+                </div>
+            </div>
+
+            <div class="content-time">
+                <div class="select-time">
+                    <button class="select-timebtn" id="t4" onclick="selectTime(id)">13.30 - 14.30</button>
+                </div>
+                <div class="select-time">
+                    <button class="select-timebtn" id="t5" onclick="selectTime(id)">14.30 - 15.30</button>
+                </div>
+                <div class="select-time">
+                    <button class="select-timebtn" id="t6" onclick="selectTime(id)">15.30 - 16.30</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="calendar">
+            <div class="calendar-header">
+                <span class="month-picker" id="month-picker">February</span>
+                <div class="year-picker">
+                    <span class="year-change" id="prev-year">
+                        <pre><</pre>
+                    </span>
+                    <span id="year">2021</span>
+                    <span class="year-change" id="next-year">
+                        <pre>></pre>
+                    </span>
+                </div>
+            </div>
+            <div class="calendar-body">
+                <div class="calendar-week-day">
+                    <div>Sun</div>
+                    <div>Mon</div>
+                    <div>Tue</div>
+                    <div>Wed</div>
+                    <div>Thu</div>
+                    <div>Fri</div>
+                    <div>Sat</div>
+                </div>
+                <div class="calendar-days"></div>
+            </div>
+
+            <div class="month-list"></div>
+        </div>
+        
+        <div class="next">
+            <button class="nextbtn" onclick="togglePopup()">ถัดไป</button>
+        </div>
+
+        <script src="/js/calendar.js"></script>
+    </div>
+    
+    <div class="panel-confirm" id="panel-confirm">
+        <div class="schedule-date">
+            <h3>ยืนยันการจอง</h3>
+        </div>
+        <h4>อุปกรณ์ : @Model.tools.toolName</h4>
+        <h4>วัน/เดือน/ปี : @Model.historys[0].rentTime.ToString("dd/MM/yyyy")</h4>
+        <h4>ช่วงเวลา : <span id="displayTime">-</span> น.</h4>
+        <form method="post" asp-controller="Rent">
+            <input type="hidden" id="inputTool" name="inputTool" value="@Model.tools.toolName">
+            <input type="hidden" id="inputDate" name="inputDate" value='@Model.historys[0].rentTime.ToString("dd/MM/yyyy")'> 
+            <input type="hidden" id="inputTime" name="inputTime">
+            <div class="confirm">
+            <button class="confirmbtn" type="submit">ยืนยัน</button>
+            </div>
+            <div class="back">
+            <button class="backbtn" type="reset" onclick="togglePopup()">ยกเลิก</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    function selectTime(id) {
+        document.getElementById("inputTime").value = document.getElementById(id).innerHTML;
+        document.getElementById("displayTime").innerHTML = document.getElementById(id).innerHTML;
+        //console.log(document.getElementById("inputTime").value);
+    }
+</script>

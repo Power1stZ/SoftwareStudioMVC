@@ -36,7 +36,6 @@ generateCalendar = (month, year) => {
     let calendar_days = calendar.querySelector('.calendar-days')
     let calendar_header_year = calendar.querySelector('#year')
     let showdate = document.getElementById("show-date")
-    let showCurrentDay = document.getElementById("show-curr")
     let days_of_month = [31, getFebDays(year), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
     calendar_days.innerHTML = ''
@@ -73,14 +72,14 @@ generateCalendar = (month, year) => {
         day.onclick = () => {
             // console.log(day.innerText)
             showdate.innerHTML = day.innerText+" "+ curr_month + " " + year;
-            showCurrentDay.innerHTML = "ตารางวันที่ : " + day.innerText +" "+ curr_month + " " + year;
+            document.getElementById("datefield").value = showdate.innerHTML;
             calendar.style.display = 'none';
         }
         calendar_days.appendChild(day)
     }
     
     showdate.innerHTML = currDate.getDate()+" "+ curr_month +" " +year;
-    showCurrentDay.innerHTML = "ตารางวันที่ : " + currDate.getDate()+" "+ curr_month +" " + year;
+    document.getElementById("datefield").value = showdate.innerHTML;
     
 }
 

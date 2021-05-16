@@ -11,7 +11,7 @@
     <div class="column left">
         <h2 class="username">ห้อง : @Model.tools.room</h2>
         <div class="schedule-date">
-            <h3 id="show-curr"></h3>
+            <h3 id="show-curr">ตารางวันที่ : @Model.historys[0].rentTime.ToString("dd/MM/yyyy")</h3>
         </div>
         <div class="panel">
             <div class="content-row">
@@ -52,7 +52,12 @@
             <button class="select-datebtn">
                 <div>
                     <img class="img-calendar" src="/pic/calendar-alt-solid.svg" alt="" />
-                    <h3 id="show-date" onchange="setHiddenValue()"></h3>
+                    <h3 id="show-date">เลือกวันที่ต้องการจองนะคะ</h3>
+                    <form method="post" asp-controller="SelectEquipment" asp-action="SelectDate">
+                        <input type="hidden" id="datefield" name="date" required>
+                        <input type="hidden" name="toolName" value="@Model.tools.toolName">
+                        <button type="submit">เช็คอุปกรณ์</button>
+                    </form>
                 </div>
             </button>
         </div>
@@ -121,24 +126,26 @@
         <div class="schedule-date">
             <h3>ยืนยันการจอง</h3>
         </div>
-        <h4>อุปกรณ์ : เชิงเทียน</h4>
-        <h4>วัน/เดือน/ปี : 4/4/2021</h4>
-        <h4>ช่วงเวลา : 9.30-10.30 น.</h4>
-        <div class="confirm">
-            <button class="confirmbtn">ยืนยัน</button>
-        </div>
-        <div class="back" onclick="togglePopup()">
-            <button class="backbtn">ยกเลิก</button>
-        </div>
+        <h4>อุปกรณ์ : @Model.tools.toolName</h4>
+        <h4>วัน/เดือน/ปี : @Model.historys[0].rentTime.ToString("dd/MM/yyyy")</h4>
+        <h4>ช่วงเวลา : <span id="displayTime">-</span> น.</h4>
+        <form method="post" asp-controller="Rent">
+            <input type="hidden" id="inputTool" name="inputTool" value="@Model.tools.toolName">
+            <input type="hidden" id="inputDate" name="inputDate" value='@Model.historys[0].rentTime.ToString("dd/MM/yyyy")'> 
+            <input type="hidden" id="inputTime" name="inputTime">
+            <div class="confirm">
+            <button class="confirmbtn" type="submit">ยืนยัน</button>
+            </div>
+            <div class="back">
+            <button class="backbtn" type="reset" onclick="togglePopup()">ยกเลิก</button>
+            </div>
+        </form>
     </div>
 </div>
 <script type="text/javascript">
-    function setHiddenValue(){
-        var selectDate = document.getElementById("show-date").innerText;
-        console.log(selectDate);
+    function selectTime(id) {
+        document.getElementById("inputTime").value = document.getElementById(id).innerHTML;
+        document.getElementById("displayTime").innerHTML = document.getElementById(id).innerHTML;
+        //console.log(document.getElementById("inputTime").value);
     }
-    @* var tool = document.getElementById("toolId").innerText; *@
-    //alert("/SelectPage/Index/"+tool+"/"+selectDate);
-    @* console.log("/SelectEquipment/Index/"+tool+"/"+selectDate); *@
-    //window.location.replace("/SelectEquipment/Index?tool="+tool+"&date="+selectDate);
 </script>

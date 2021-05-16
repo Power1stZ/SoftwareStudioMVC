@@ -160,3 +160,4 @@ E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_AdminMainPageLayout.cshtml.g.cs
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\StartPage\Login.cshtml.g.cs
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\StartPage\Register.cshtml.g.cs
+E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\SelectEquipment\SelectDate.cshtml.g.cs
