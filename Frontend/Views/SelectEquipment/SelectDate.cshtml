@@ -3,11 +3,11 @@
 @{
     ViewData["Title"] = "Home Page";
     Layout = "_TopNavBarLayout";
-    @* var csDate = Request.Form["inputDate"]; *@
 }
 
 
 <div class="light">
+    @* <h3 id = "toolId">@Model.tools.id</h3> *@
     <div class="column left">
         <h2 class="username">ห้อง : @Model.tools.room</h2>
         <div class="schedule-date">
@@ -52,7 +52,7 @@
             <button class="select-datebtn">
                 <div>
                     <img class="img-calendar" src="/pic/calendar-alt-solid.svg" alt="" />
-                    <h3 id="show-date">เลือกวันที่ต้องการจองนะคะ</h3>
+                    <h3 id="show-date"></h3>
                     <form method="post" asp-controller="SelectEquipment" asp-action="SelectDate">
                         <input type="hidden" id="datefield" name="date" required>
                         <input type="hidden" name="toolName" value="@Model.tools.toolName">
@@ -64,7 +64,7 @@
         <div class="panel-time">
             <div class="content-time">
                 <div class="select-time">
-                    <button class="select-timebtn" id="t1" onclick="selectTime(id)">9.30 - 10.30</button>
+                    <button class="select-timebtn" id="t1" onclick="selectTime(id)" autofocus>9.30 - 10.30</button>
                 </div>
                 <div class="select-time">
                     <button class="select-timebtn" id="t2" onclick="selectTime(id)">10.30 - 11.30</button>
@@ -86,7 +86,6 @@
                 </div>
             </div>
         </div>
-
         <div class="calendar">
             <div class="calendar-header">
                 <span class="month-picker" id="month-picker">February</span>
@@ -115,25 +114,25 @@
 
             <div class="month-list"></div>
         </div>
-        
+
         <div class="next">
             <button class="nextbtn" onclick="togglePopup()">ถัดไป</button>
         </div>
 
+
         <script src="/js/calendar.js"></script>
     </div>
-    
     <div class="panel-confirm" id="panel-confirm">
         <div class="schedule-date">
             <h3>ยืนยันการจอง</h3>
         </div>
         <h4>อุปกรณ์ : @Model.tools.toolName</h4>
         <h4>วัน/เดือน/ปี : @Model.historys[0].rentTime.ToString("dd/MM/yyyy")</h4>
-        <h4>ช่วงเวลา : <span id="displayTime">-</span> น.</h4>
+        <h4>ช่วงเวลา : <span id="displayTime">9.30 - 10.30</span> น.</h4>
         <form method="post" asp-controller="Rent">
             <input type="hidden" id="inputTool" name="inputTool" value="@Model.tools.toolName">
             <input type="hidden" id="inputDate" name="inputDate" value='@Model.historys[0].rentTime.ToString("dd/MM/yyyy")'> 
-            <input type="hidden" id="inputTime" name="inputTime">
+            <input type="hidden" id="inputTime" name="inputTime" value="9.30 - 10.30">
             <div class="confirm">
             <button class="confirmbtn" type="submit">ยืนยัน</button>
             </div>
@@ -144,6 +143,8 @@
     </div>
 </div>
 <script type="text/javascript">
+    //console.log(document.getElementById("inputTime").value);
+    //console.log(document.getElementById("inputDate").value);
     function selectTime(id) {
         document.getElementById("inputTime").value = document.getElementById(id).innerHTML;
         document.getElementById("displayTime").innerHTML = document.getElementById(id).innerHTML;
