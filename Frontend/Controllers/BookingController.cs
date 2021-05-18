@@ -102,7 +102,7 @@ namespace Frontend.Controllers
             Console.WriteLine(tempHistory.studentNumber);
             User tempUser = _userService.GetById(tempHistory.studentNumber);
             // if(temp.rentTIEnumerable.AddHours(1))
-            tempHistory.lendTime = DateTime.Now;
+            tempHistory.lendTime = DateTime.Now.AddHours(7);
             if (DateTime.Compare(tempHistory.lendTime, tempHistory.rentTime.AddMinutes(70)) > 0) {
                 tempUser.exceedCount = tempUser.exceedCount + 1;
             }
@@ -118,7 +118,7 @@ namespace Frontend.Controllers
             Console.WriteLine(tempHistory.studentNumber);
             User tempUser = _userService.GetById(tempHistory.studentNumber);
             // if(temp.rentTIEnumerable.AddHours(1))
-            tempHistory.lendTime = DateTime.Now;
+            tempHistory.lendTime = DateTime.Now.AddHours(7);
             if (DateTime.Compare(tempHistory.lendTime, tempHistory.rentTime.AddMinutes(70)) > 0) {
                 tempUser.exceedCount = tempUser.exceedCount + 1;
             }
@@ -132,7 +132,7 @@ namespace Frontend.Controllers
         {
             History tempHistory = _historyService.Get(id);
             // if(temp.rentTIEnumerable.AddHours(1))
-            tempHistory.lendTime = DateTime.Now;
+            tempHistory.lendTime = DateTime.Now.AddHours(7);
             //Console.WriteLine(JsonConvert.SerializeObject(temp, Formatting.Indented));
             _historyService.Update(tempHistory.id,tempHistory);
             return View("Index");

@@ -15624,6 +15624,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\Admin\\Blacklist.cshtml",
+      "TargetPath": "Views\\Admin\\Blacklist.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\Admin\\Index.cshtml",
+      "TargetPath": "Views\\Admin\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\Shared\\_MainPageLayout.cshtml",
       "TargetPath": "Views\\Shared\\_MainPageLayout.cshtml",
       "FileKind": "mvc"
@@ -15661,6 +15671,11 @@
     {
       "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\Shared\\_BookingLayout.cshtml",
       "TargetPath": "Views\\Shared\\_BookingLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\Shared\\_AdminLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_AdminLayout.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15711,6 +15726,11 @@
     {
       "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\Shared\\_AdminMainPageLayout.cshtml",
       "TargetPath": "Views\\Shared\\_AdminMainPageLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\Admin\\RoomAndTool.cshtml",
+      "TargetPath": "Views\\Admin\\RoomAndTool.cshtml",
       "FileKind": "mvc"
     },
     {

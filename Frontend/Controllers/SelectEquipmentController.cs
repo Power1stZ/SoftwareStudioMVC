@@ -35,7 +35,7 @@ namespace Frontend.Controllers
 
         public IActionResult Index(string id)
         {
-            Tool tools = _toolService.Get(id);
+            Tool tools = _toolService.GetByToolName(id);
             //Console.WriteLine(tools.toolName);
             List<History> historys = _historyService.GetByToolName(tools.toolName);
             if (tools != null)
@@ -46,11 +46,11 @@ namespace Frontend.Controllers
                 List<History> result = new List<History>();
                 result.Add(new History
                 {
-                    rentTime = DateTime.Now
+                    rentTime = DateTime.Now.Date
                 });
                 foreach (var item in temp)
                 {
-                    if (item.lendTime == item.createTime && item.rentTime.ToString("dd/MM/yyyy") == DateTime.Now.ToString("dd/MM/yyyy"))
+                    if (item.lendTime == item.createTime && DateTime.Compare(item.rentTime.Date, DateTime.Now.Date) <= 0)
                     {
                         result.Add(item);
                     }
@@ -61,6 +61,8 @@ namespace Frontend.Controllers
             }
             return View("ไม่มีอุปกรณ์");
         }
+
+
 
         [HttpPost]
         public IActionResult SelectDate(string toolName, string date)
@@ -84,9 +86,8 @@ namespace Frontend.Controllers
                 });
                 foreach (var item in temp)
                 {
-                    // Console.WriteLine(item.rentTime.ToString("dd/MM/yyyy"));
-                    // Console.WriteLine(date.ToString("dd/MM/yyyy"));
-                    if (item.rentTime.ToString("dd/MM/yyyy") == realDateTime.ToString("dd/MM/yyyy") && item.lendTime == item.createTime)
+                    
+                    if (item.lendTime == item.createTime && DateTime.Compare(item.rentTime.Date, realDateTime.Date) <= 0)
                     {
                         Console.WriteLine(item.rentTime.ToString("dd/MM/yyyy"));
                         result.Add(item);
@@ -99,11 +100,25 @@ namespace Frontend.Controllers
             }
             return View("ไม่มีอุปกรณ์");
         }
-        public IActionResult Rent(string tool, string date, string time)
+
+        [HttpPost]
+        public IActionResult Rent(string inputTool,string inputDate, string inputTime)
         {
-            return View("Index");
+            inputTime = inputTime.Substring(0,inputTime.IndexOf(" "));
+            // Console.WriteLine(inputTime);
+            var stringOfDate = inputDate + " " + inputTime;
+            // Console.WriteLine(stringOfDate);
+            DateTime dateTime12 = DateTime.ParseExact(stringOfDate, "dd/MM/yyyy H:mm", CultureInfo.InvariantCulture);
+		    // Console.WriteLine(dateTime12);
+            var data = _historyService.Create(new History
+                {
+                    studentNumber = User.FindFirst("studentNumber").Value,
+                    toolName = inputTool,
+                    rentTime = dateTime12.AddHours(7),
+                    lendTime = DateTime.Now.AddHours(7),
+                    createTime = DateTime.Now.AddHours(7)
+                });
+            return RedirectToAction("Index",new {id = inputTool});
         }
-
-
     }
 }

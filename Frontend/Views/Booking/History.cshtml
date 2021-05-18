@@ -19,12 +19,12 @@
                         {
                             <div class="content-row">
                                 <div class="equipment">@rest.toolName</div>
-                                <div class="time">@rest.rentTime.AddHours(7).ToString("HH:mm") น. - @rest.rentTime.AddHours(8).ToString("HH:mm") น.
+                                <div class="time">@rest.rentTime.ToString("HH:mm") น. - @rest.rentTime.AddHours(1).ToString("HH:mm") น.
                                 </div>
                                 <div class=button2>
                                     @if (DateTime.Compare(rest.lendTime, rest.rentTime.AddMinutes(70)) > 0)
                                     {
-                                        <div class="overdue">@rest.lendTime.ToString("dd/MM/yyyy") @rest.lendTime.AddHours(7).ToString("HH:mm")น.</div>
+                                        <div class="overdue">@rest.lendTime.ToString("dd/MM/yyyy") @rest.lendTime.ToString("HH:mm")น.</div>
                                     }
                                     else if (rest.lendTime == rest.createTime && DateTime.Compare(DateTime.Now,
                                     rest.rentTime.AddMinutes(70)) > 0)
@@ -35,12 +35,12 @@
                                     rest.rentTime.AddMinutes(70)) <= 0)
                                     {
                                         <div class="restored">@rest.lendTime.ToString("dd/MM/yyyy")
-                                            @rest.lendTime.AddHours(7).ToString("HH:mm")น.</div>
+                                            @rest.lendTime.ToString("HH:mm")น.</div>
                                     }
                                     else if (DateTime.Compare(DateTime.Now, rest.rentTime) >= 0 && DateTime.Compare(DateTime.Now,
                                     rest.rentTime.AddMinutes(70)) <= 0)
                                     {
-                                        <div class="regular">กรุณาคืนก่อนเวลา @rest.rentTime.AddHours(7).AddMinutes(70).ToString("HH:mm")น.</div>
+                                        <div class="regular">กรุณาคืนก่อนเวลา @rest.rentTime.AddHours(1).AddMinutes(10).ToString("HH:mm")น.</div>
                                     }
                                     else
                                     {

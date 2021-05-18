@@ -1,0 +1,61 @@
+@model IEnumerable<Frontend.Models.User>
+@{
+    Layout = "_AdminLayout";
+}
+
+<div class="page3_content">
+    <div class="column">
+        <div class="section_header_row">
+            <p class='section_txt'>ประวัติการคืนเกินกำหนดเวลา</p>
+            <button class="section_btn">ล้างประวัติ</button>
+        </div>
+        <div class="user_ban_list">
+        @foreach (var item in Model)
+        {
+            if(!item.isBan)
+            {
+                    <div class="list_overdue">
+                        <p>@item.firstName</p>
+                        <p>@item.exceedCount ครั้ง</p>
+                        <a asp-controller="Admin" asp-action="BannedUser" asp-route-id ="@item.id">
+                            <button class="ban_btn" >BAN</button>
+                        </a>
+                        
+                    </div>
+                <hr>
+                
+            }
+        }
+        </div>
+        
+    </div>
+    <hr class='page_divider'>
+
+    <div class="column">
+        <div class="section_header_row">
+            <p class='section_txt'>ผู้ใช้งานที่ถูกแบน</p>
+            
+            <button class="section_btn">ล้างประวัติ</button>
+        </div>
+        <div class="user_ban_list">
+        @foreach (var item in Model)
+        {
+            if(item.isBan)
+            {
+                
+                <div class="list_overdue">
+                    <p>@item.firstName</p>
+                    <a asp-controller="Admin" asp-action="UnBanned" asp-route-id = "@item.id">
+                        <button class="unban_btn">ปลด BAN</button>
+                    </a>
+                    
+                </div>
+                <hr>
+                
+            }
+            
+        }
+        </div>
+        
+    </div>
+</div>

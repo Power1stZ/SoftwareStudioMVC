@@ -18,7 +18,7 @@
     <div class="myButton">
         @foreach (var item in Model.tools)
         {
-            <a asp-controller="SelectEquipment" asp-action="Index" asp-route-id="@item.id">
+            <a asp-controller="SelectEquipment" asp-action="Index" asp-route-id="@item.toolName">
                 <INPUT type="submit" name="sss" value="@item.toolName">
             </a>
         }
