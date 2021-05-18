@@ -16,29 +16,34 @@
         <div class="panel">
             @{
                 var nEquipment = Model.tools.maxCount;
-                for (var item = 1; item < Model.historys.Count;item++){
-                    if (DateTime.Compare(Model.historys[item].rentTime.AddMinutes(70), DateTime.Now) < 0 && DateTime.Compare(DateTime.Now.Date, @Model.historys[0].rentTime.Date) <= 0){
-                        nEquipment--;
+                if (DateTime.Compare(DateTime.Now.Date, @Model.historys[0].rentTime.Date) <= 0){
+                    for (var item = 1; item < Model.historys.Count;item++){
+                        if (DateTime.Compare(Model.historys[item].rentTime.AddMinutes(70), DateTime.Now) < 0){
+                            nEquipment--;
+                        }
                     }
                 }
+
                 Console.WriteLine(nEquipment);
                 int[] nInEachTime = {nEquipment, nEquipment, nEquipment, nEquipment, nEquipment, nEquipment};
                 for(var i = 0 ; i < nInEachTime.Length ; i++){
-                    if(i > 2){
-                        foreach(var j in Model.historys){
-                            if(DateTime.Compare(j.rentTime, @Model.historys[0].rentTime.AddHours(10 + i).AddMinutes(30)) == 0){
-                                nInEachTime[i]--;
+                    if(DateTime.Compare(DateTime.Now.Date, @Model.historys[0].rentTime.Date) <= 0){
+                        if(i > 2){
+                            foreach(var j in Model.historys){
+                                if(DateTime.Compare(j.rentTime, @Model.historys[0].rentTime.AddHours(10 + i).AddMinutes(30)) == 0){
+                                    nInEachTime[i]--;
+                                }
+                            }     
+                        }
+                        else{
+                            foreach(var j in Model.historys){
+                                if(DateTime.Compare(j.rentTime, @Model.historys[0].rentTime.AddHours(9 + i).AddMinutes(30)) == 0){
+                                    nInEachTime[i]--;
+                                }
                             }
                         }
                     }
-                    else{
-                        foreach(var j in Model.historys){
-                            if(DateTime.Compare(j.rentTime, @Model.historys[0].rentTime.AddHours(9 + i).AddMinutes(30)) == 0){
-                                nInEachTime[i]--;
-                            }
-                        }
-                    }
-
+                    
                     <div class="content-row">
                         @if (i > 2){
                             <div class="time">@Model.historys[0].rentTime.AddHours(10 + i).AddMinutes(30).ToString("HH:mm") - @Model.historys[0].rentTime.AddHours(11 + i).AddMinutes(30).ToString("HH:mm") น.</div>
