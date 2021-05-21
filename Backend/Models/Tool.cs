@@ -16,10 +16,13 @@ namespace Backend.Models
         [BsonElement("room")]
         public string room { get; set; }
 
+        [BsonElement("imgUrl")]
+        public string imgUrl { get; set; }
+
         [BsonElement("description")]
         public string description { get; set; }
 
         [BsonElement("maxCount")]
-        public string maxCount { get; set; }
+        public int maxCount { get; set; }
     }
 }

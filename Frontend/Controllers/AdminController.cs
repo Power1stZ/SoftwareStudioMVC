@@ -68,20 +68,45 @@ namespace Frontend.Controllers
                     }
                 }
             }
-            
+            List<History> sort = temp.OrderByDescending(history => history.rentTime).ToList();
             mymodel.tool = tool;
-            mymodel.history = temp;
+            mymodel.history = sort;
             return View(mymodel);
         }
 
-        public IActionResult RoomAndTool()
+        public IActionResult RoomAndTool(string? roomName)
         {
             ViewData["Page1"] = "unselect";
             ViewData["Page2"] = "select";
             ViewData["Page3"] = "unselect";
+            List<Room> room = _roomService.Get();
+            List<Tool> tool = _toolService.Get();
+            dynamic mydata = new ExpandoObject();
+            List<Tool> tempTool = new List<Tool>();
+            if(roomName != null)
+            {
+                foreach (var item in tool)
+                {
+                    if(item.room == roomName)
+                    {
+                        tempTool.Add(item);
+                    }
+                }
+            }
+            else
+            {
+                foreach (var item in tool)
+                {
+                    if(item.room == room[0].roomName)
+                    {
+                        tempTool.Add(item);
+                    }
+                }
+            }
+            mydata.room = room;
+            mydata.tool = tempTool;
             
-            
-            return View();
+            return View(mydata);
         }
 
         public IActionResult BlackList()
@@ -133,5 +158,24 @@ namespace Frontend.Controllers
             return RedirectToAction("Index",new {toolName = tool});
 
         }
+
+        public IActionResult PlusCount(string toolName)
+        {
+            Tool tool = _toolService.GetByToolName(toolName);
+            // Console.WriteLine(JsonConvert.SerializeObject(tool, Formatting.Indented));
+            tool.maxCount += 1;
+            _toolService.Update(tool.id,tool);
+            return RedirectToAction("RoomAndTool",new {roomName = tool.room});
+        }
+
+        public IActionResult MinusCount(string toolName)
+        {
+            Tool tool = _toolService.GetByToolName(toolName);
+            // Console.WriteLine(JsonConvert.SerializeObject(tool, Formatting.Indented));
+            tool.maxCount -= 1;
+            _toolService.Update(tool.id,tool);
+            return RedirectToAction("RoomAndTool",new {roomName = tool.room});
+        }
+    
     }
 }

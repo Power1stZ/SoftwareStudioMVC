@@ -109,7 +109,7 @@ namespace Frontend.Controllers
             //Console.WriteLine(JsonConvert.SerializeObject(temp, Formatting.Indented));
             _userService.Update(tempUser.id,tempUser);
             _historyService.Update(tempHistory.id,tempHistory);
-            return View("History");
+            return RedirectToAction("History");
         }
 
         public IActionResult LendOverdue(string id)
@@ -125,7 +125,7 @@ namespace Frontend.Controllers
             //Console.WriteLine(JsonConvert.SerializeObject(temp, Formatting.Indented));
             _userService.Update(tempUser.id,tempUser);
             _historyService.Update(tempHistory.id,tempHistory);
-            return View("Overdue");
+            return RedirectToAction("Overdue");
         }
 
         public IActionResult LendIndex(string id)
@@ -135,7 +135,7 @@ namespace Frontend.Controllers
             tempHistory.lendTime = DateTime.Now.AddHours(7);
             //Console.WriteLine(JsonConvert.SerializeObject(temp, Formatting.Indented));
             _historyService.Update(tempHistory.id,tempHistory);
-            return View("Index");
+            return RedirectToAction("Index");
         }
     }
 }

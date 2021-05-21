@@ -1,6 +1,7 @@
 @model dynamic
 @{
     Layout = "_AdminLayout";
+    var tempDay = "";
 }
 
 <div class='page1_content'>
@@ -18,9 +19,13 @@
             <div class='selection_box'>
             @foreach (var item in Model.tool)
             {
-                <a asp-controller="Admin" asp-action="Index" asp-route-toolName="@item.toolName">
-                    <button class='sel_room_btn'>@item.toolName</button>
-                </a>
+                
+                <button class='sel_room_btn'>
+                    <a asp-controller="Admin" asp-action="Index" asp-route-toolName="@item.toolName">
+                        @item.toolName
+                    </a>
+                </button>
+                
             }  
             </div>
         </div>
@@ -47,17 +52,45 @@
     <div class='column'>
         <p class='section_txt'>สถานะการจอง</p>
         <div class='list_box'>
-        @foreach (var item in Model.history)
-        {
-            <div class='borrower_list'>
-                <p>@item.studentNumber</p>
-                <p>@item.toolName</p>
-                <p>@item.rentTime.ToString("HH:mm") - @item.rentTime.AddHours(1).ToString("HH:mm")</p>
-                <a asp-controller="Admin" asp-action="Cancel" asp-route-id="@item.id" asp-route-toolName="@item.toolName">
-                    <button>ยกเลิกการจอง</button>
-                </a>
-            </div>
-            <hr>
+        @{
+            if(Model.history.Count != 0)
+            {
+                foreach (var date in Model.history)
+                {
+                    if (date.rentTime.ToString("dd/MM/yyyy") != tempDay)
+                    {
+                        tempDay = date.rentTime.ToString("dd/MM/yyyy");
+                        <h3 class="date">วันที่จอง : @date.rentTime.ToString("dd/MM/yyyy")</h3>
+                    
+                        foreach (var item in Model.history)
+                        {
+                            if (item.rentTime.ToString("dd/MM/yyyy") == tempDay)
+                            {
+                                <div class='borrower_list'>
+                                    <p>@item.studentNumber</p>
+                                    <p>@item.toolName</p>
+                                    <p>@item.rentTime.ToString("HH:mm") - @item.rentTime.AddHours(1).ToString("HH:mm")</p>
+                                    <button>
+                                        <a asp-controller="Admin" asp-action="Cancel" asp-route-id="@item.id" asp-route-toolName="@item.toolName">
+                                            ยกเลิกการจอง
+                                        </a>
+                                    </button>
+                                </div>
+                                <hr>
+                            }
+                        }
+                    }
+                }
+            }
+            else{
+                <div class='borrower_list'>
+                    <p>
+                    ไม่มีรายการจองในขณะนี้
+                    </p>
+                </div>
+            }
+            
+
         }
             
         </div>

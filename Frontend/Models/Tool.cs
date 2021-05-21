@@ -16,6 +16,9 @@ namespace Frontend.Models
         [BsonElement("room")]
         public string room { get; set; }
 
+        [BsonElement("imgUrl")]
+        public string imgUrl { get; set; }
+
         [BsonElement("description")]
         public string description { get; set; }
 

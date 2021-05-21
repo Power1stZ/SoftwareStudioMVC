@@ -1,13 +1,20 @@
+@model dynamic
+
 @{
     Layout = "_AdminLayout";
 }
 <div class="page2_content">
     <p class="section_txt">ห้องปฏิบัติการ</p>
     <div class="select_room_page2">
-        <button>ห้องที่ 1</button>
-        <button>ห้องที่ 2</button>
-        <button>ห้องที่ 3</button>
-        <button>ห้องที่ 4</button>
+        @foreach (var item in Model.room)
+        {
+            <button>
+                <a asp-controller="Admin" asp-action="RoomAndTool" asp-route-roomName="@item.roomName">
+                    @item.roomName
+                </a>
+            </button>
+        }
+          
     </div>
     <div class="section_header_row">
             <p class='section_txt'>จัดการอุปกรณ์</p>
@@ -17,54 +24,26 @@
             </div>
         </div>
     <div class="tool_zone">
-        <div class="toolcard">
-            <button class="increasebtn">+</button>
-            <button class="decreasebtn">-</button>
-            <div class="imgcontainer"><img class="toolimg" src="/img/weed.png"></div>
-            <div class="tooltext">
-                <p class="toolname">Weed</p>
-                <p class="toolquantity">20</p>
+        @foreach (var item in Model.tool)
+        {
+            <div class="toolcard">
+                <a asp-controller="Admin" asp-action="PlusCount" asp-route-toolName="@item.toolName">
+                    <button class="increasebtn">+</button>
+                </a>
+                <a asp-controller="Admin" asp-action="MinusCount" asp-route-toolName="@item.toolName">
+                    <button class="decreasebtn">-</button>
+                </a>
+                <div class="imgcontainer"><img class="toolimg" src="@item.imgUrl"></div>
+                <div class="tooltext">
+                    <p class="toolname">@item.toolName</p>
+                    <p class="toolquantity">@item.maxCount</p>
+                </div>
             </div>
-        </div>
-        <div class="toolcard">
-            <button class="increasebtn">+</button>
-            <button class="decreasebtn">-</button>
-            <div class="imgcontainer"><img class="toolimg" src="/img/weed.png"></div>
-            <div class="tooltext">
-                <p class="toolname">Weed</p>
-                <p class="toolquantity">20</p>
-            </div>
-        </div>
-        <div class="toolcard">
-            <button class="increasebtn">+</button>
-            <button class="decreasebtn">-</button>
-            <div class="imgcontainer"><img class="toolimg" src="/img/weed.png"></div>
-            <div class="tooltext">
-                <p class="toolname">Weed</p>
-                <p class="toolquantity">20</p>
-            </div>
-        </div>
-        <div class="toolcard">
-            <button class="increasebtn">+</button>
-            <button class="decreasebtn">-</button>
-            <div class="imgcontainer"><img class="toolimg" src="/img/weed.png"></div>
-            <div class="tooltext">
-                <p class="toolname">Weed</p>
-                <p class="toolquantity">20</p>
-            </div>
-        </div>
-        <div class="toolcard">
-            <button class="increasebtn">+</button>
-            <button class="decreasebtn">-</button>
-            <div class="imgcontainer"><img class="toolimg" src="/img/weed.png"></div>
-            <div class="tooltext">
-                <p class="toolname">Weed</p>
-                <p class="toolquantity">20</p>
-            </div>
-        </div>
-        <div class="toolcard">
+        }
+        
+        @* <div class="toolcard">
             <button class="add_tool">+ เพิ่มอุปกรณ์ใหม่</button>
-        </div>
+        </div> *@
     </div>
     </div>
 </div>

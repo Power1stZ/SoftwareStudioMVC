@@ -1,3 +1,4 @@
+@using System.Security.Claims
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +24,7 @@
     <div class="admin_header">
         <div class="header_element">
             <div>
-                <h3 class='welcome_msg'>สวัสดี, ธนพล</h3>
+                <h3 class='welcome_msg'>สวัสดี, @(User.FindFirst("firstName").Value) @(User.FindFirst("lastName").Value)</h3>
                 <p class="sub_msg">ระบบจัดการห้องปฏิบัติการสถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
             </div>
             <div>
