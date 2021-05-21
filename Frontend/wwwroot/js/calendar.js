@@ -78,8 +78,8 @@ generateCalendar = (month, year) => {
         calendar_days.appendChild(day)
     }
     
-    showdate.innerHTML = currDate.getDate()+" "+ curr_month +" " +year;
-    document.getElementById("datefield").value = showdate.innerHTML;
+    //showdate.innerHTML = currDate.getDate()+" "+ curr_month +" " +year;
+   // document.getElementById("datefield").value = showdate.innerHTML;
     
 }
 

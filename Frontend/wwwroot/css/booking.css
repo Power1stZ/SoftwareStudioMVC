@@ -171,9 +171,6 @@ hr {
   justify-content: space-around;
 }
 
-.panel-time {
-  margin-top: 100px;
-}
 
 .content-time {
   padding: 10px 5px;
@@ -284,6 +281,23 @@ hr {
   color: #ffffff;
 }
 
+.disable-timebtn {
+  background-color: #c0c0c0;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 16px;
+  border: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  outline: none;
+  color: #fff;
+}
+
+
+
 .back {
   margin-top: 5%;
   position: relative;
@@ -340,7 +354,7 @@ hr {
 }
 
 .next {
-  margin-top: 5%;
+  margin-top: 2%;
   display: flex;
   justify-content: flex-end;
 }
@@ -359,6 +373,33 @@ hr {
   border: 2px solid #fff;
   box-shadow: 0px 0px 0px 1px #fff;
 }
+
+.check-tool {
+  margin-top: 5%;
+  display: flex;
+  justify-content: flex-end;
+}
+.check-toolbtn {
+  background-color: #ffffff;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  outline: none;
+  font-weight: 700;
+}
+
+.check-toolbtn:focus {
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 0px 1px #fff;
+}
+
+.check-tool:hover .check-toolbtn {
+  background-color: #cba9f8;
+}
+
+
 
 @keyframes anim-shadow {
   100% {
