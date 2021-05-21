@@ -168,7 +168,7 @@
         </div>
 
         <div class="next">
-            <button class="nextbtn" onclick="togglePopup()">ถัดไป</button>
+            <button class="nextbtn" id="submitted" onclick="togglePopup()" disabled>ถัดไป</button>
         </div>
 
 
@@ -200,6 +200,7 @@
     function selectTime(id) {
         document.getElementById("inputTime").value = document.getElementById(id).innerHTML;
         document.getElementById("displayTime").innerHTML = document.getElementById(id).innerHTML;
+        document.getElementById("submitted").disabled = false;
         //console.log(document.getElementById("inputTime").value);
     }
 </script>
