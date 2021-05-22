@@ -54,32 +54,112 @@
       width:100%;
       text-align: center;
   }
-  .header_txt h2{
+  .header_txt>h2{
     margin: 10px;
 }
-.neighbour_page p{
+.neighbour_page>p{
     margin: 30px 0 ;
+    font-size:20px
 }
 .card_row{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
     /* background-color: white; */
+
 }
 .card{
     width:20%;
-    height: 300px;
+    height: 500px;
     position: relative;
     padding: 0;
     border-radius: 15px;;
     background-color : white;
 }
+.card:hover{
+    border: 4px outset #00CD83;
+    
+}
+.room_no{
+    position: absolute;
+    top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 80px;
+    color: #00CD83;
+}
 .room_name{
     text-align: center;
     position:absolute;
+    font-size: 20px;
     width: 100%;
     background-color:#FFF1E6;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 5px;
     margin:0;
-    padding: 0;
     top: 0;
+}
+.bot_left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0px;
+    position:absolute;
+    width:50%;
+    bottom:0;
+    left:0;
+    background-color: #FFF1E6;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    height:150px;
+    /* border-right: 2px solid white; */
+}
+.bot_right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 0px;
+    position:absolute;
+    width:50%;
+    bottom:0;
+    right:0;
+    background-color: #FFF1E6;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    height:150px;
+    /* border-left: 2px solid white; */
+}
+p:last-child{
+    color:#00CD83;
+    font-size: 20px;
+}
+.divider{
+    position:absolute;
+    background-color:white;
+    height : 130px;
+    width : 4px;
+    bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+.visit_btn{
+    width:100%;
+    /* height: 60px; */
+    border: none;
+    background-color:white;
+    border-radius: 15px;
+    margin: 40px 0px;
+    padding: 7px;
+}
+.visit_btn:hover{
+   border: 2px solid #00CD83;
 }
