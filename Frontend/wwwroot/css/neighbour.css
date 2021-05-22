@@ -159,6 +159,7 @@ p:last-child{
     border-radius: 15px;
     margin: 40px 0px;
     padding: 7px;
+    font-size: 20px;
 }
 .visit_btn:hover{
    border: 2px solid #00CD83;
