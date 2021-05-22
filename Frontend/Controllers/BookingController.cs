@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 using Frontend.Services;
+using System.Dynamic;
 
 namespace Frontend.Controllers
 {

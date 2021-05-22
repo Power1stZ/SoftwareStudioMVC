@@ -18,6 +18,7 @@ using System.Globalization;
 
 namespace Frontend.Controllers
 {
+    [Authorize]
     public class SelectEquipmentController : Controller
     {
         private readonly ILogger<SelectEquipmentController> _logger;
@@ -89,7 +90,7 @@ namespace Frontend.Controllers
                     
                     if (item.lendTime == item.createTime && DateTime.Compare(item.rentTime.Date, realDateTime.Date) <= 0)
                     {
-                        Console.WriteLine(item.rentTime.ToString("dd/MM/yyyy"));
+                        //Console.WriteLine(item.rentTime.ToString("dd/MM/yyyy"));
                         result.Add(item);
                     }
                 }

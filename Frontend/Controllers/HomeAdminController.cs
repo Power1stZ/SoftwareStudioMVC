@@ -1,21 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Frontend.Models;
+using Frontend.Services;
+using System.Net.Http;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
-using Frontend.Services;
+using System.Threading.Tasks;
+using System.Dynamic;
 
 namespace Frontend.Controllers
 {
+    [Authorize]
     public class HomeAdminController : Controller
     {
         private readonly ILogger<HomeAdminController> _logger;

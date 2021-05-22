@@ -4,6 +4,11 @@
     Layout = "_BookingLayout";
     var tempDay = "";
 }
+<div class="tab_area">
+            <button type="button" onclick="location.href='@Url.Action("Index", "Admin")'" >สถานะการจอง</button>
+            <button type="button" onclick="location.href='@Url.Action("RoomAndTool", "Admin")'" >จัดการห้องและอุปกรณ์</button>
+            <button type="button" onclick="location.href='@Url.Action("Blacklist", "Admin")'" >จัดการ Blacklist</button>
+        </div>
 
 <div class="column mid">
     @if(Model != null && Model.Any()){
