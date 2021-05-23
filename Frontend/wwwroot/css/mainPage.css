@@ -4,7 +4,6 @@
 }
 .textdec {
   text-decoration: none;
-  display: flex;
 }
 .navbar {
   list-style-type: none;
@@ -70,6 +69,7 @@ body {
   display: block;
   position: relative;
   background-color: black;
+  height: 100%;
 }
 
 .rentBg::before {
