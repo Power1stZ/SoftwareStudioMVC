@@ -17,7 +17,6 @@ using Frontend.Services;
 
 namespace Frontend.Controllers
 {
-    [Authorize]
     public class NeighbourController : Controller
     {
         private readonly ILogger<NeighbourController> _logger;
