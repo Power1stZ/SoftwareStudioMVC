@@ -15759,6 +15759,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Tanapon\\Desktop\\CODE\\SoftStu\\Project\\SoftwareStudioMVC\\Frontend\\Views\\Neighbour\\NeighbourDetails.cshtml",
+      "TargetPath": "Views\\Neighbour\\NeighbourDetails.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Tanapon\\Desktop\\CODE\\SoftStu\\Project\\SoftwareStudioMVC\\Frontend\\Views\\Neighbour\\Index.cshtml",
       "TargetPath": "Views\\Neighbour\\Index.cshtml",
       "FileKind": "mvc"

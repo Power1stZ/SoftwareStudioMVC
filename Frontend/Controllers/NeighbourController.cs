@@ -30,6 +30,14 @@ namespace Frontend.Controllers
             
             return View();
         }
+        public IActionResult NeighbourDetails()
+        {
+            ViewData["Page1"] = "unselect";
+            ViewData["Page2"] = "select";
+            ViewData["Page3"] = "unselect";
+            
+            return View();
+        }
 
     }
 }

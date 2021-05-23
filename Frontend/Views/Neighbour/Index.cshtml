@@ -1,4 +1,5 @@
-@{ Layout = "_NeighbourLayout"; }
+@{
+  Layout = "_NeighbourLayout"; }
 
 <div class="neighbour_page">
   <div class="header_txt">
@@ -62,5 +63,6 @@
       <div class="divider"></div>
     </div>
   </div>
-  <button class="visit_btn">เยี่ยมชมเว็บไซต์</button>
+  <button type="button" class="visit_btn"
+    onclick="location.href='@Url.Action("NeighbourDetails", "Neighbour")'">เยี่ยมชมเว็บไซต์</button>
 </div>

@@ -253,3 +253,4 @@ C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Deb
 C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.pdb
 C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.genruntimeconfig.cache
 C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_NeighbourLayout.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Neighbour\NeighbourDetails.cshtml.g.cs
