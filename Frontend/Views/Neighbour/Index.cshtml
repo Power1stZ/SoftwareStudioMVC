@@ -1,0 +1,32 @@
+@{
+  Layout = "_NeighbourLayout"; 
+  var data = ViewBag.ExternalLabs;
+  }
+
+<div class="neighbour_page">
+  <div class="header_txt">
+    <h2>Neighbour's Laboratory</h2>
+  </div>
+  <p>รายชื่อห้องแล็บ</p>
+  <div class="card_row">
+    @foreach (var item in data)
+    {
+        <a class="card"
+        asp-controller = "Neighbour" asp-action = "NeighbourDetails" asp-route-labName="@item.name">
+        <p class="room_name">@item.name</p>
+        <p class="room_no">@item.lab_id</p>
+        <div class="bot_left">
+          <p>Equipment</p>
+          <p>@item.equip</p>
+        </div>
+        <div class="bot_right">
+          <p>Quantity</p>
+          <p>@item.max</p>
+        </div>
+        <div class="divider"></div>
+      </a>
+      
+    }
+  </div>
+  <button class="visit_btn">เยี่ยมชมเว็บไซต์</button>
+</div>

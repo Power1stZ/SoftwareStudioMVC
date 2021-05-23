@@ -19,7 +19,10 @@
         @foreach (var item in Model.tools)
         {
             <a asp-controller="SelectEquipment" asp-action="Index" asp-route-id="@item.toolName">
-                <INPUT type="submit" name="sss" value="@item.toolName">
+                <div class="btn_img_col">
+                <INPUT type="image" class="pic_btn" src="@item.imgUrl" name="sss" value="@item.toolName">
+                <p>@item.toolName</p>
+                </div>
             </a>
         }
     </div>

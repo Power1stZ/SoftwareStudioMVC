@@ -2,12 +2,16 @@
 @{
     Layout = "_AdminLayout";
 }
+<div class="tab_area">
+            <button type="button" class="@ViewData["Page1"]" onclick="location.href='@Url.Action("Index", "Admin")'" >สถานะการจอง</button>
+            <button type="button" class="@ViewData["Page2"]" onclick="location.href='@Url.Action("RoomAndTool", "Admin")'" >จัดการห้องและอุปกรณ์</button>
+            <button type="button" class="@ViewData["Page3"]" onclick="location.href='@Url.Action("Blacklist", "Admin")'" >จัดการ Blacklist</button>
+</div>
 
 <div class="page3_content">
     <div class="column">
         <div class="section_header_row">
             <p class='section_txt'>ประวัติการคืนเกินกำหนดเวลา</p>
-            <button class="section_btn">ล้างประวัติ</button>
         </div>
         <div class="user_ban_list">
         @foreach (var item in Model)
@@ -15,7 +19,7 @@
             if(!item.isBan)
             {
                     <div class="list_overdue">
-                        <p>@item.firstName</p>
+                        <p>@item.studentNumber</p>
                         <p>@item.exceedCount ครั้ง</p>
                         <a asp-controller="Admin" asp-action="BannedUser" asp-route-id ="@item.id">
                             <button class="ban_btn" >BAN</button>
@@ -34,8 +38,6 @@
     <div class="column">
         <div class="section_header_row">
             <p class='section_txt'>ผู้ใช้งานที่ถูกแบน</p>
-            
-            <button class="section_btn">ล้างประวัติ</button>
         </div>
         <div class="user_ban_list">
         @foreach (var item in Model)
@@ -44,7 +46,7 @@
             {
                 
                 <div class="list_overdue">
-                    <p>@item.firstName</p>
+                    <p>@item.studentNumber</p>
                     <a asp-controller="Admin" asp-action="UnBanned" asp-route-id = "@item.id">
                         <button class="unban_btn">ปลด BAN</button>
                     </a>

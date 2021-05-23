@@ -17,6 +17,7 @@ using Newtonsoft.Json;
 
 namespace Frontend.Controllers
 {
+    [Authorize]
     public class SelectPageController : Controller
     {
         private readonly ILogger<SelectPageController> _logger;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Frontend.Models;
+using System.Net.Http;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -16,7 +17,8 @@ using Frontend.Services;
 using System.Dynamic;
 
 namespace Frontend.Controllers
-{
+{ 
+    [Authorize]
     public class AdminController : Controller
     {
         private readonly ILogger<AdminController> _logger;
@@ -33,8 +35,8 @@ namespace Frontend.Controllers
             _roomService = roomService;
             _toolService = toolService;
         }
-
-        public IActionResult Index(string? toolName)
+ 
+        public IActionResult Index(string? toolName, string? time)
         {
             ViewData["Page1"] = "select";
             ViewData["Page2"] = "unselect";
@@ -62,15 +64,27 @@ namespace Frontend.Controllers
                 // Console.WriteLine("2");
                 foreach (var item in history)
                 {
-                    if(item.createTime == item.lendTime && item.toolName == tool[0].toolName)
+                    if(item.createTime == item.lendTime)
                     {
                         temp.Add(item);
                     }
                 }
             }
             List<History> sort = temp.OrderByDescending(history => history.rentTime).ToList();
+            List<History> result = new List<History>();
+            //Console.WriteLine(JsonConvert.SerializeObject(sort, Formatting.Indented));
+            if(time != null){
+                foreach (var item in sort) {
+                    if (item.rentTime.ToString("HH:mm") == time){
+                        result.Add(item);
+                    }
+                }
+            }
+            else{
+                result = sort;
+            }
             mymodel.tool = tool;
-            mymodel.history = sort;
+            mymodel.history = result;
             return View(mymodel);
         }
 

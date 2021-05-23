@@ -3,19 +3,23 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Frontend.Models;
+using Frontend.Services;
+using System.Net.Http;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Dynamic;
 
 namespace Frontend.Controllers
 {
     [Authorize]
     public class MainPageController : Controller
     {
-
         ILogger<MainPageController> _logger;
 
         public MainPageController(ILogger<MainPageController> logger)

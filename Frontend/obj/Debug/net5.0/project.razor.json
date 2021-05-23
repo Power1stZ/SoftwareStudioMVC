@@ -15654,6 +15654,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\Neighbour\\Index.cshtml",
+      "TargetPath": "Views\\Neighbour\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\Neighbour\\NeighbourDetails.cshtml",
+      "TargetPath": "Views\\Neighbour\\NeighbourDetails.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\HomeAdmin\\ToolStock.cshtml",
       "TargetPath": "Views\\HomeAdmin\\ToolStock.cshtml",
       "FileKind": "mvc"
@@ -15691,6 +15701,11 @@
     {
       "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\Shared\\_SelectPageLayout.cshtml",
       "TargetPath": "Views\\Shared\\_SelectPageLayout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "e:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Views\\Shared\\_NeighbourLayout.cshtml",
+      "TargetPath": "Views\\Shared\\_NeighbourLayout.cshtml",
       "FileKind": "mvc"
     },
     {

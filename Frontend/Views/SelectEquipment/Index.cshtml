@@ -16,41 +16,56 @@
         <div class="panel">
             @{
                 var nEquipment = Model.tools.maxCount;
-                for (var item = 1; item < Model.historys.Count;item++){
-                    if (DateTime.Compare(Model.historys[item].rentTime.AddMinutes(70), DateTime.Now) < 0){
+                for (var item = 1; item < Model.historys.Count; item++)
+                {
+                    if (DateTime.Compare(Model.historys[item].rentTime.AddMinutes(70), DateTime.Now) < 0)
+                    {
                         nEquipment--;
                     }
                 }
-                Console.WriteLine(nEquipment);
-                int[] nInEachTime = {nEquipment, nEquipment, nEquipment, nEquipment, nEquipment, nEquipment};
-                for(var i = 0 ; i < nInEachTime.Length ; i++){
-                    if(i > 2){
-                        foreach(var j in Model.historys){
-                            if(DateTime.Compare(j.rentTime, @Model.historys[0].rentTime.AddHours(10 + i).AddMinutes(30)) == 0){
+                //Console.WriteLine(nEquipment);
+                int[] nInEachTime = { nEquipment, nEquipment, nEquipment, nEquipment, nEquipment, nEquipment };
+                for (var i = 0; i < nInEachTime.Length; i++)
+                {
+                    if (i > 2)
+                    {
+                        foreach (var j in Model.historys)
+                        {
+                            if (DateTime.Compare(j.rentTime, @Model.historys[0].rentTime.AddHours(10 + i).AddMinutes(30)) == 0)
+                            {
                                 nInEachTime[i]--;
                             }
                         }
                     }
-                    else{
-                        foreach(var j in Model.historys){
-                            if(DateTime.Compare(j.rentTime, @Model.historys[0].rentTime.AddHours(9 + i).AddMinutes(30)) == 0){
+                    else
+                    {
+                        foreach (var j in Model.historys)
+                        {
+                            if (DateTime.Compare(j.rentTime, @Model.historys[0].rentTime.AddHours(9 + i).AddMinutes(30)) == 0)
+                            {
                                 nInEachTime[i]--;
                             }
                         }
                     }
 
                     <div class="content-row">
-                        @if (i > 2){
-                            <div class="time">@Model.historys[0].rentTime.AddHours(10 + i).AddMinutes(30).ToString("HH:mm") - @Model.historys[0].rentTime.AddHours(11 + i).AddMinutes(30).ToString("HH:mm") น.</div>
+                        @if (i > 2)
+                        {
+                            <div class="time">@Model.historys[0].rentTime.AddHours(10 + i).AddMinutes(30).ToString("HH:mm") -
+                                @Model.historys[0].rentTime.AddHours(11 + i).AddMinutes(30).ToString("HH:mm") น.</div>
                         }
-                        else{
-                            <div class="time">@Model.historys[0].rentTime.AddHours(9 + i).AddMinutes(30).ToString("HH:mm") - @Model.historys[0].rentTime.AddHours(10 + i).AddMinutes(30).ToString("HH:mm") น.</div>
+                        else
+                        {
+                            <div class="time">@Model.historys[0].rentTime.AddHours(9 + i).AddMinutes(30).ToString("HH:mm") -
+                                @Model.historys[0].rentTime.AddHours(10 + i).AddMinutes(30).ToString("HH:mm") น.</div>
                         }
-                        
-                        @if(nInEachTime[i] != 0){
+
+                        @if (nInEachTime[i] != 0)
+                        {
                             <div class="status-true">@nInEachTime[i] available</div>
                         }
-                        else{
+                        else
+                        {
                             <div class="status-false">@nInEachTime[i] available</div>
                         }
                     </div>
@@ -69,66 +84,92 @@
             <button class="select-datebtn">
                 <div>
                     <img class="img-calendar" src="/pic/calendar-alt-solid.svg" alt="" />
-                    <h3 id="show-date"></h3>
-                    <form method="post" asp-controller="SelectEquipment" asp-action="SelectDate">
-                        <input type="hidden" id="datefield" name="date" required>
-                        <input type="hidden" name="toolName" value="@Model.tools.toolName">
-                        <button type="submit">เช็คอุปกรณ์</button>
-                    </form>
+                    <h3 id="show-date">@Model.historys[0].rentTime.ToString("dd MMMM yyyy")</h3>
                 </div>
             </button>
+        </div>
+        <div class="check-tool">
+            <form method="post" asp-controller="SelectEquipment" asp-action="SelectDate">
+                <input type="hidden" id="datefield" name="date" value='@Model.historys[0].rentTime.ToString("dd MMMM yyyy")'>
+                <input type="hidden" name="toolName" value="@Model.tools.toolName">
+                <button class="check-toolbtn" type="submit">เช็คอุปกรณ์</button>
+            </form>
         </div>
         <div class="panel-time">
             <div class="content-time">
                 <div class="select-time">
-                    @if (DateTime.Now.Date.AddHours(9).AddMinutes(30).CompareTo(DateTime.Now) > 0 && nInEachTime[0] > 0){
+                    @if (DateTime.Now.Date.AddHours(9).AddMinutes(30).CompareTo(DateTime.Now) > 0 && nInEachTime[0] >
+                    0)
+                    {
                         <button class="select-timebtn" id="t1" onclick="selectTime(id)">9:30 - 10:30</button>
-                    }else{
-                        Console.WriteLine("Overdue");
-                        <button class="select-timebtn" id="t1" disabled>9:30 - 10:30</button>
+                    }
+                    else
+                    {
+                        //Console.WriteLine("Overdue");
+                        <button class="disable-timebtn" id="t1" disabled>9:30 - 10:30</button>
                     }
                 </div>
                 <div class="select-time">
-                    @if (DateTime.Now.Date.AddHours(10).AddMinutes(30).CompareTo(DateTime.Now) > 0 && nInEachTime[1] > 0){
+                    @if (DateTime.Now.Date.AddHours(10).AddMinutes(30).CompareTo(DateTime.Now) > 0 && nInEachTime[1] >
+                    0)
+                    {
                         <button class="select-timebtn" id="t2" onclick="selectTime(id)">10:30 - 11:30</button>
-                    }else{
-                        Console.WriteLine("Overdue");
-                        <button class="select-timebtn" id="t2" disabled>10:30 - 11:30</button>
+                    }
+                    else
+                    {
+                        //Console.WriteLine("Overdue");
+                        <button class="disable-timebtn" id="t2" disabled>10:30 - 11:30</button>
                     }
                 </div>
                 <div class="select-time">
-                    @if (DateTime.Now.Date.AddHours(11).AddMinutes(30).CompareTo(DateTime.Now) > 0 && nInEachTime[2] > 0){
+                    @if (DateTime.Now.Date.AddHours(11).AddMinutes(30).CompareTo(DateTime.Now) > 0 && nInEachTime[2] >
+                    0)
+                    {
                         <button class="select-timebtn" id="t3" onclick="selectTime(id)">11:30 - 12:30</button>
-                    }else{
-                        Console.WriteLine("Overdue");
-                        <button class="select-timebtn" id="t3" disabled>11:30 - 12:30</button>
+                    }
+                    else
+                    {
+                        //Console.WriteLine("Overdue");
+                        <button class="disable-timebtn" id="t3" disabled>11:30 - 12:30</button>
                     }
                 </div>
             </div>
 
             <div class="content-time">
                 <div class="select-time">
-                    @if (DateTime.Now.Date.AddHours(13).AddMinutes(30).CompareTo(DateTime.Now) > 0 && nInEachTime[3] > 0){
+                    @if (DateTime.Now.Date.AddHours(13).AddMinutes(30).CompareTo(DateTime.Now) > 0 && nInEachTime[3] >
+                    0)
+                    {
                         <button class="select-timebtn" id="t4" onclick="selectTime(id)">13:30 - 14:30</button>
-                    }else{
-                        Console.WriteLine("Overdue");
-                        <button class="select-timebtn" id="t4" disabled>13:30 - 14:30</button>
+                    }
+                    else
+                    {
+                        //Console.WriteLine("Overdue");
+                        <button class="disable-timebtn" id="t4" disabled>13:30 - 14:30</button>
                     }
                 </div>
                 <div class="select-time">
-                    @if (DateTime.Now.Date.AddHours(14).AddMinutes(30).CompareTo(DateTime.Now) > 0 && nInEachTime[4] > 0){
+                    @if (DateTime.Now.Date.AddHours(14).AddMinutes(30).CompareTo(DateTime.Now) > 0 && nInEachTime[4] >
+                    0)
+                    {
                         <button class="select-timebtn" id="t5" onclick="selectTime(id)">14:30 - 15:30</button>
-                    }else{
-                        Console.WriteLine("Overdue");
-                        <button class="select-timebtn" id="t5" disabled>14:30 - 15:30</button>
+                    }
+                    else
+                    {
+                        //Console.WriteLine("Overdue");
+                        <button class="disable-timebtn" id="t5" disabled>14:30 - 15:30</button>
                     }
                 </div>
                 <div class="select-time">
-                    @if (DateTime.Now.Date.AddHours(15).AddMinutes(30).CompareTo(DateTime.Now) > 0 && nInEachTime[5] > 0){
+                    @if (DateTime.Now.Date.AddHours(15).AddMinutes(30).CompareTo(DateTime.Now) > 0 && nInEachTime[5] >
+                    0)
+                    {
                         <button class="select-timebtn" id="t6" onclick="selectTime(id)">15:30 - 16:30</button>
-                    }else{
-                        Console.WriteLine("Overdue");
-                        <button class="select-timebtn" id="t6" disabled>15:30 - 16:30</button>
+                    }
+                    else
+                    {
+                        //Console.WriteLine("Overdue");
+                        <button class="disable-timebtn" id="t6" disabled>15:30 - 16:30</button>
                     }
                 </div>
             </div>
@@ -163,7 +204,7 @@
         </div>
 
         <div class="next">
-            <button class="nextbtn" onclick="togglePopup()">ถัดไป</button>
+            <button class="nextbtn" id = 'submitted'onclick="togglePopup()" disabled>ยืนยัน</button>
         </div>
 
         <script src="/js/calendar.js"></script>
@@ -177,7 +218,8 @@
         <h4>ช่วงเวลา : <span id="displayTime">-</span> น.</h4>
         <form method="post" asp-controller="SelectEquipment" asp-action="Rent">
             <input type="hidden" id="inputTool" name="inputTool" value="@Model.tools.toolName">
-            <input type="hidden" id="inputDate" name="inputDate" value='@Model.historys[0].rentTime.ToString("dd/MM/yyyy")'>
+            <input type="hidden" id="inputDate" name="inputDate"
+                value='@Model.historys[0].rentTime.ToString("dd/MM/yyyy")'>
             <input type="hidden" id="inputTime" name="inputTime">
             <div class="confirm">
                 <button class="confirmbtn" type="submit">ยืนยัน</button>
@@ -194,6 +236,7 @@
     function selectTime(id) {
         document.getElementById("inputTime").value = document.getElementById(id).innerHTML;
         document.getElementById("displayTime").innerHTML = document.getElementById(id).innerHTML;
+        document.getElementById("submitted").disabled = false;
         //console.log(document.getElementById("inputTime").value);
     }
 </script>

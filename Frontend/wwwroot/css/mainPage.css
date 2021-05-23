@@ -22,9 +22,6 @@
 .filler {
   flex: 1;
 }
-/* .navbarlist:first-child {
-  margin-right: auto;
-} */
 
 .navbarlist a {
   display: block;
@@ -139,26 +136,28 @@ body {
   width: 20%;
 }
 
-.contactAdmin {
+.labPartner {
   display: block;
   height: 310px;
   position: relative;
   background-color: black;
+  cursor: pointer;
 }
 
-.contactAdmin::before {
+.labPartner::before {
   content: " ";
   display: block;
   position: absolute;
   width: 100%;
   height: 100%;
   opacity: 0.5;
-  background-image: url("/pic/contactAdminbg.jpg");
+  /*background-image: url("https://raw.githubusercontent.com/Power1stZ/SoftwareStudioMVC/brightv3/Frontend/wwwroot/pic/labPartnerbg.jpg"); */
+  background-image: url("/pic/labPartnerbg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.contactAdminText {
+.labPartnerText {
   width: 100%;
   position: relative;
   text-align: center;
@@ -167,10 +166,68 @@ body {
   padding-top: 5%;
 }
 
-.contactAdminIcon {
+.labPartnerIcon {
   position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 20%;
+}
+
+
+
+.contactDesc{
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-color: #fff1e6;
+  padding: 20px 30px;
+  width: 400px;
+  height: 320px;
+  box-shadow: rgba(0, 0, 0, 0.199) 2px 2px 2px 2px;
+}
+
+.contactDesc.active {
+  display: block;
+}
+
+.contactDesc.active {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.closeContactDesc{
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  opacity: 0.3;
+  color: black;
+  cursor: pointer;
+}
+.closeContactDesc:hover{
+  opacity: 1;
+}
+.closeContactDesc:before,
+.closeContactDesc:after {
+  position: absolute;
+  left: 15px;
+  content: " ";
+  height: 33px;
+  width: 2px;
+}
+
+.contactTitle{
+  text-align: center;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.contactMaterial{
+  font-size: 16px;
 }
