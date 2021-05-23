@@ -151,6 +151,7 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0.5;
+  /*background-image: url("https://raw.githubusercontent.com/Power1stZ/SoftwareStudioMVC/brightv3/Frontend/wwwroot/pic/labPartnerbg.jpg"); */
   background-image: url("/pic/labPartnerbg.jpg");
   background-repeat: no-repeat;
   background-size: cover;

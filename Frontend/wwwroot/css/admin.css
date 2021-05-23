@@ -18,10 +18,9 @@
     height: 100%;
   }
 
-  .sel_room_btn{
-    
+  /* .sel_room_btn{
     width: 100px;
-  }
+  } */
 .navbarlist:first-child {
   margin-right: auto;
 }
@@ -219,9 +218,11 @@
     background-color: white;
     border: 4px solid rgb(170, 168, 168);
     border-radius: 10px;
-    width: 40%;
+    width: 20%;
     height: 100px;
     margin: 20px;
+    text-align: center;
+    padding-top: 30px;
   }
   .selection_box .sel_time_btn {
     background-color: white;
@@ -230,13 +231,15 @@
     width: 27%;
     height: 60px;
     margin: 20px;
+    text-align: center;
+    padding-top: 15px;
   }
   
   .selection_panel > button:hover {
     border-bottom: 4px solid #dadada;
   }
   
-  .selection_box button:hover {
+  .selection_box a:hover {
     border: 4px solid #00cd83;
   }
   .list_box {
@@ -265,14 +268,16 @@
     padding: 0px 20px;
     width: 100%;
   }
-  .borrower_list button {
+  .borrower_list a {
     width: 30%;
     height: 30px;
     background-color: #ffc300;
     border-radius: 15px;
     border: none;
+    text-align: center;
+    padding-top: 3px;
   }
-  .borrower_list button:hover {
+  .borrower_list a:hover {
     width: 30%;
     height: 30px;
     background-color: #ffda61;
@@ -301,14 +306,16 @@
     width: 90vw;
     height: 10vh;
   }
-  .select_room_page2 button {
+  .select_room_page2 a {
     background-color: white;
     border-radius: 10px;
     border: 4px solid rgb(192, 192, 192);
     border-radius: 10px;
-    width: 20%;
+    width: 18%;
+    text-align: center;
+    padding-top: 10px;
   }
-  .select_room_page2 button:hover {
+  .select_room_page2 a:hover {
     border: 4px solid #00cd83;
   }
   .tool_zone {

@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 using Frontend.Services;
+using Newtonsoft.Json.Linq;
 
 namespace Frontend.Controllers
 {
@@ -21,21 +22,61 @@ namespace Frontend.Controllers
     {
         private readonly ILogger<NeighbourController> _logger;
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            ViewData["Page1"] = "select";
-            ViewData["Page2"] = "unselect";
-            ViewData["Page3"] = "unselect";
+            var json = await GetExternalLabs();
+            JObject o = JObject.Parse(json);
+            // Console.WriteLine(JsonConvert.SerializeObject(o.GetValue("data"), Formatting.Indented));
+            // var exLabs = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+            // Console.WriteLine(JsonConvert.SerializeObject(exLabs, Formatting.Indented));
+            // ViewBag.ExternalLabs = exLabs;
+            var result = o.GetValue("data");
+            ViewBag.ExternalLabs = result;
             
             return View();
         }
-        public IActionResult NeighbourDetails()
+        public async Task<IActionResult> NeighbourDetails(string labName)
         {
-            ViewData["Page1"] = "unselect";
-            ViewData["Page2"] = "select";
-            ViewData["Page3"] = "unselect";
-            
+            var json = await GetExternalLabs();
+            JObject o = JObject.Parse(json);
+            var temp = o.GetValue("data");
+            var result = new Object();
+            foreach (var item in temp)
+            {
+                if(item.Value<string>("name") == labName)
+                {
+                    result = item;
+                    // Console.WriteLine(result);
+                    break;
+                }
+            }
+            ViewBag.TimeSlot = result;
             return View();
+        }
+
+        private async Task<string> GetExternalLabs()
+        {
+            string baseUrl = "http://54a4071ae66d.ap.ngrok.io/LabManage/ExternalAPI";
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    using (HttpResponseMessage res = await client.GetAsync(baseUrl))
+                    {
+                        using (HttpContent content = res.Content)
+                        {
+                            var data = await content.ReadAsStringAsync();
+                            if (data == null) return "[]";
+                            return data;
+                        }
+                    }
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                return "[]";
+            }
         }
 
     }

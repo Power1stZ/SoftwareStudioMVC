@@ -7239,19 +7239,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tanapon\\.nuget\\packages\\": {}
+    "C:\\Users\\Alps\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tanapon\\Desktop\\CODE\\SoftStu\\Project\\SoftwareStudioMVC\\Frontend\\Frontend.csproj",
+      "projectUniqueName": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Frontend.csproj",
       "projectName": "Frontend",
-      "projectPath": "C:\\Users\\Tanapon\\Desktop\\CODE\\SoftStu\\Project\\SoftwareStudioMVC\\Frontend\\Frontend.csproj",
-      "packagesPath": "C:\\Users\\Tanapon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tanapon\\Desktop\\CODE\\SoftStu\\Project\\SoftwareStudioMVC\\Frontend\\obj\\",
+      "projectPath": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\Frontend.csproj",
+      "packagesPath": "C:\\Users\\Alps\\.nuget\\packages\\",
+      "outputPath": "E:\\work\\3D\\Semester 2\\SW Studio\\Borrow Web\\SoftwareStudioMVC\\Frontend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Tanapon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alps\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -7326,7 +7326,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\Tanapon\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Tanapon\\.nuget\\packages"
+      "C:\\Users\\Alps\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Alps\\.nuget\\packages"
     ]
   }
 }

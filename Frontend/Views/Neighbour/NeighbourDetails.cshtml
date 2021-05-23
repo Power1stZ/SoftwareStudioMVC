@@ -1,57 +1,59 @@
-@{ Layout = "_NeighbourLayout"; }
+@{ Layout = "_NeighbourLayout"; 
+    var data = ViewBag.TimeSlot;
+}
 
 <div class="neighbour_page">
   <div class="header_txt">
     <h2>Neighbour's Laboratory</h2>
   </div>
   <div class="room_details_row">
-      <p>Lab-001</p>
-      <p>Tool-1</p>
+      <p>@data.name</p>
+      <p>@data.equip</p>
   </div>
   <p>อุปกรณ์ที่สามารถจองได้</p>
     <div class="time_row">
-        <div class="time_slot">
-            <div>00:00</div>
-            <div>25</div>
+     <div class="time_slot">
+            <div>08:00 - 09:00</div>
+            <div>@data.slot[0][0]</div>
         </div>
         <div class="time_slot">
-            <div>00:00</div>
-            <div>25</div>
+            <div>09:00 - 10:00</div>
+            <div>@data.slot[0][1]</div>
         </div>
         <div class="time_slot">
-            <div>00:00</div>
-            <div>25</div>
+            <div>10:00 - 11:00</div>
+            <div>@data.slot[0][2]</div>
         </div>
         <div class="time_slot">
-            <div>00:00</div>
-            <div>25</div>
+            <div>11:00 - 12:00</div>
+            <div>@data.slot[0][3]</div>
         </div>
         <div class="time_slot">
-            <div>00:00</div>
-            <div>25</div>
+            <div>12:00 - 13:00</div>
+            <div>@data.slot[0][4]</div>
         </div>
     </div>
 
     <div class="time_row">
         <div class="time_slot">
-            <div>00:00</div>
-            <div>25</div>
+            <div>13:00 - 14:00</div>
+            <div>@data.slot[0][5]</div>
         </div>
         <div class="time_slot">
-            <div>00:00</div>
-            <div>25</div>
+            <div>14:00 - 15:00</div>
+            <div>@data.slot[0][6]</div>
         </div>
         <div class="time_slot">
-            <div>00:00</div>
-            <div>25</div>
+            <div>15:00 - 16:00</div>
+            <div>@data.slot[0][7]</div>
         </div>
         <div class="time_slot">
-            <div>00:00</div>
-            <div>25</div>
+            <div>16:00 - 17:00</div>
+            <div>@data.slot[0][8]</div>
         </div>
         <div class="time_slot">
-            <div>00:00</div>
-            <div>25</div>
+            <div>17:00 - 18:00</div>
+            <div>@data.slot[0][9]</div>
         </div>
     </div>
 
