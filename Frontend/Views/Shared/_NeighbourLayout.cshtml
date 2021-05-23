@@ -1,0 +1,36 @@
+@using System.Security.Claims
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Software Studio</title>
+    <link rel="stylesheet" href="/css/neighbour.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E" />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <ul class="navbar">
+        <li class="navbarlist"><a class="active" asp-controller="MainPage" asp-action="Index">หน้าหลัก</a></li>
+        <li class="filler"></li>
+        @* <li class="navbarlist">
+            <div class="user">ยินดีต้อนรับ @(User.FindFirst("studentNumber").Value) @(User.FindFirst("firstName").Value)
+                @(User.FindFirst("lastName").Value)</div>
+        </li> *@
+        <li class="navbarlist"><a class="active" asp-controller="StartPage" asp-action="Logout">ออกจากระบบ</a></li>
+    </ul>
+
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

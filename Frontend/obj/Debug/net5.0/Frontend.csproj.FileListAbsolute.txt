@@ -165,6 +165,7 @@ E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Admin\RoomAndTool.cshtml.g.cs
 E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
+<<<<<<< HEAD
 D:\Soft stu\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\appsettings.Development.json
 D:\Soft stu\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\appsettings.json
 D:\Soft stu\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Frontend.exe
@@ -251,3 +252,97 @@ D:\Soft stu\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.dll
 D:\Soft stu\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\ref\Frontend.dll
 D:\Soft stu\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.pdb
 D:\Soft stu\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.genruntimeconfig.cache
+=======
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\appsettings.json
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Frontend.exe
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Frontend.deps.json
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Frontend.runtimeconfig.json
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Frontend.runtimeconfig.dev.json
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Frontend.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\ref\Frontend.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Frontend.pdb
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Frontend.Views.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Frontend.Views.pdb
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\DnsClient.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Humanizer.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\System.Net.Http.Formatting.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\MongoDB.Bson.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\MongoDB.Driver.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\MongoDB.Driver.Core.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\MongoDB.Libmongocrypt.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\SharpCompress.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\runtimes\win\native\libzstd.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\runtimes\win\native\snappy32.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\runtimes\win\native\snappy64.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\bin\Debug\net5.0\runtimes\win\native\mongocrypt.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.csprojAssemblyReference.cache
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.AssemblyInfoInputs.cache
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.AssemblyInfo.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.csproj.CoreCompileInputs.cache
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.RazorAssemblyInfo.cache
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.RazorAssemblyInfo.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\staticwebassets\Frontend.StaticWebAssets.Manifest.cache
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\staticwebassets\Frontend.StaticWebAssets.xml
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\scopedcss\bundle\Frontend.styles.css
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.TagHelpers.input.cache
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.TagHelpers.output.cache
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.RazorCoreGenerate.cache
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Admin\Blacklist.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Admin\RoomAndTool.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Booking\History.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Booking\Index.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Booking\Overdue.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\HomeAdmin\BannedUser.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\HomeAdmin\Index.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\HomeAdmin\Privacy.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\HomeAdmin\ToolStock.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\MainPage\AdminMainPage.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\MainPage\Index.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Neighbour\index.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\SelectEquipment\Index.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\SelectEquipment\SelectDate.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\SelectPage\Index.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_AdminMainPageLayout.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_AdminSidebarLayout.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_BookingLayout.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_MainPageLayout.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_SelectPageLayout.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_StartPageLayout.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_TopNavBarLayout.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\StartPage\Index.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\StartPage\Login.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\StartPage\Register.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.RazorTargetAssemblyInfo.cache
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.RazorTargetAssemblyInfo.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.Views.pdb
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.csproj.CopyComplete
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\ref\Frontend.dll
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.pdb
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Frontend.genruntimeconfig.cache
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_NeighbourLayout.cshtml.g.cs
+C:\Users\Tanapon\Desktop\CODE\SoftStu\Project\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Neighbour\NeighbourDetails.cshtml.g.cs
+>>>>>>> origin/neighbour
+E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Neighbour\Index.cshtml.g.cs
+E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Neighbour\NeighbourDetails.cshtml.g.cs
+E:\work\3D\Semester 2\SW Studio\Borrow Web\SoftwareStudioMVC\Frontend\obj\Debug\net5.0\Razor\Views\Shared\_NeighbourLayout.cshtml.g.cs
