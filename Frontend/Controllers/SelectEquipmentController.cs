@@ -70,7 +70,7 @@ namespace Frontend.Controllers
         {
             //Console.WriteLine(date);
             DateTime realDateTime = DateTime.ParseExact(date, "d MMMM yyyy", CultureInfo.InvariantCulture);
-            Console.WriteLine(realDateTime);
+            //Console.WriteLine(realDateTime);
             Tool tools = _toolService.GetByToolName(toolName);
             List<History> historys = _historyService.GetByToolName(tools.toolName);
             //Console.WriteLine(historys);
@@ -96,7 +96,7 @@ namespace Frontend.Controllers
                 }
                 mymodel.historys = result;
                 // Console.Write("Finish");
-                Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
+                //Console.WriteLine(JsonConvert.SerializeObject(result, Formatting.Indented));
                 return View(mymodel);
             }
             return View("ไม่มีอุปกรณ์");

@@ -27,10 +27,23 @@ body {
   padding: 0;
   overflow: hidden;
   background-color: #001d3d;
+
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  padding: 0 5%;
 }
 
 .navbarlist {
   float: left;
+}
+
+.navbarlist .user {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .navbarlist a {
@@ -166,6 +179,7 @@ body {
   margin: 40px 0px;
   padding: 7px;
   font-size: 20px;
+  text-align: center;
 }
 .visit_btn:hover {
   border: 2px solid #00cd83;

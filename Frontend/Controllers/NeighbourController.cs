@@ -25,6 +25,7 @@ namespace Frontend.Controllers
         public async Task<IActionResult> Index()
         {
             var json = await GetExternalLabs();
+            //Console.WriteLine(json);
             JObject o = JObject.Parse(json);
             // Console.WriteLine(JsonConvert.SerializeObject(o.GetValue("data"), Formatting.Indented));
             // var exLabs = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
@@ -32,8 +33,9 @@ namespace Frontend.Controllers
             // ViewBag.ExternalLabs = exLabs;
             var result = o.GetValue("data");
             ViewBag.ExternalLabs = result;
-            
+                
             return View();
+            
         }
         public async Task<IActionResult> NeighbourDetails(string labName)
         {
@@ -56,7 +58,7 @@ namespace Frontend.Controllers
 
         private async Task<string> GetExternalLabs()
         {
-            string baseUrl = "http://54a4071ae66d.ap.ngrok.io/LabManage/ExternalAPI";
+            string baseUrl = "http://akio147.nsharuk.com/LabManage/ExternalAPI";
             try
             {
                 using (HttpClient client = new HttpClient())
