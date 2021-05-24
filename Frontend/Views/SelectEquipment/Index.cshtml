@@ -53,20 +53,31 @@
                         {
                             <div class="time">@Model.historys[0].rentTime.AddHours(10 + i).AddMinutes(30).ToString("HH:mm") -
                                 @Model.historys[0].rentTime.AddHours(11 + i).AddMinutes(30).ToString("HH:mm") น.</div>
+                            @if (DateTime.Now.Date.AddHours(10 + i).AddMinutes(30).CompareTo(DateTime.Now) > 0) {
+                                if (nInEachTime[i] != 0){
+                                    <div class="status-true">@nInEachTime[i] available</div>
+                                }
+                                else{
+                                    <div class="status-false">@nInEachTime[i] available</div>
+                                }
+                            }else{
+                                <div class="status-false">not available</div>
+                            }
                         }
                         else
                         {
                             <div class="time">@Model.historys[0].rentTime.AddHours(9 + i).AddMinutes(30).ToString("HH:mm") -
                                 @Model.historys[0].rentTime.AddHours(10 + i).AddMinutes(30).ToString("HH:mm") น.</div>
-                        }
-
-                        @if (nInEachTime[i] != 0)
-                        {
-                            <div class="status-true">@nInEachTime[i] available</div>
-                        }
-                        else
-                        {
-                            <div class="status-false">@nInEachTime[i] available</div>
+                            @if (DateTime.Now.Date.AddHours(9 + i).AddMinutes(30).CompareTo(DateTime.Now) > 0) {
+                                if (nInEachTime[i] != 0){
+                                    <div class="status-true">@nInEachTime[i] available</div>
+                                }
+                                else{
+                                    <div class="status-false">@nInEachTime[i] available</div>
+                                }
+                            }else{
+                                <div class="status-false">not available</div>
+                            }
                         }
                     </div>
                 }
