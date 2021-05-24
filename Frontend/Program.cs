@@ -20,7 +20,9 @@ namespace Frontend
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>().UseUrls("http://localhost:5000");
+                    var port = Environment.GetEnvironmentVariable("PORT");
+
+                    webBuilder.UseStartup<Startup>().UseUrls("http://*:" + port); ;
                 });
     }
 }
