@@ -253,6 +253,7 @@
     align-items: center;
     background-color: white;
     border-radius: 10px;
+    overflow: scroll;
   }
   .list_box hr {
     width: 95%;
